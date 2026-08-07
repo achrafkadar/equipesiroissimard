@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta_title">Merci | Martin Simard — Équipe Sirois Simard</title>
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --rouge:#d53642;
+    --rouge-fonce:#b12a34;
+    --noir:#1a1c20;
+    --gris-fonce:#2b2e34;
+    --gris:#5c626b;
+    --gris-clair:#f4f5f7;
+    --blanc:#ffffff;
+    --bordure:#e2e4e8;
+    --ombre:0 10px 40px rgba(26,28,32,.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{
+    font-family:"Helvetica Neue",Arial,"Segoe UI",sans-serif;
+    color:var(--noir);
+    background:var(--gris-clair);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    min-height:100vh;
+  }
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:720px;margin:0 auto;padding:0 24px}
+
+  .topbar{background:var(--rouge);color:#fff;font-size:14px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:44px;gap:16px}
+  .topbar a{color:#fff;font-weight:700}
+
+  header{background:var(--blanc);border-bottom:1px solid var(--bordure)}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px;gap:16px}
+  .logo{height:42px}
+  .lang-switch{
+    display:inline-flex;border:1.5px solid var(--bordure);border-radius:6px;overflow:hidden;background:#fff;
+  }
+  .lang-switch button{
+    appearance:none;border:none;background:transparent;font-family:inherit;font-weight:800;font-size:13px;
+    padding:8px 12px;cursor:pointer;color:var(--gris);letter-spacing:.04em;
+  }
+  .lang-switch button.is-active{background:var(--noir);color:#fff}
+
+  .hero{
+    padding:72px 0 80px;
+    text-align:center;
+  }
+  .card{
+    background:#fff;
+    border:1px solid var(--bordure);
+    border-radius:14px;
+    box-shadow:var(--ombre);
+    padding:48px 36px;
+  }
+  .check{
+    width:64px;height:64px;border-radius:50%;background:rgba(213,54,66,.1);color:var(--rouge);
+    display:flex;align-items:center;justify-content:center;font-size:32px;font-weight:800;
+    margin:0 auto 22px;
+  }
+  .eyebrow{
+    color:var(--rouge);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px;
+  }
+  h1{font-size:34px;font-weight:800;letter-spacing:-.02em;margin-bottom:14px;line-height:1.15}
+  .lead{font-size:18px;color:var(--gris);margin-bottom:28px;max-width:480px;margin-left:auto;margin-right:auto}
+  .steps{text-align:left;margin:0 auto 28px;max-width:420px}
+  .steps li{
+    display:flex;gap:12px;align-items:flex-start;padding:12px 0;border-top:1px solid var(--bordure);
+    font-size:15px;color:var(--gris-fonce);font-weight:500;
+  }
+  .steps li:last-child{border-bottom:1px solid var(--bordure)}
+  .steps .n{
+    flex:0 0 28px;height:28px;border-radius:8px;background:var(--rouge);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:14px;
+  }
+  .btn{
+    display:inline-block;background:var(--rouge);color:#fff;font-weight:700;
+    padding:15px 28px;border-radius:6px;font-size:16px;
+    transition:background .18s ease,transform .18s ease;
+  }
+  .btn:hover{background:var(--rouge-fonce);transform:translateY(-1px)}
+  .btn-outline{
+    display:inline-block;margin-top:14px;font-weight:700;color:var(--gris-fonce);font-size:15px;
+  }
+  .btn-outline:hover{color:var(--rouge)}
+  .phone{
+    display:block;margin-top:22px;font-size:15px;color:var(--gris);font-weight:600;
+  }
+  .phone strong{color:var(--noir);font-size:18px}
+
+  footer{padding:28px 0;text-align:center;font-size:13px;color:var(--gris)}
+
+  @media(max-width:560px){
+    .hero{padding:48px 0 56px}
+    .card{padding:34px 22px}
+    h1{font-size:28px}
+  }
+</style>
+</head>
+<body>
+<div class="topbar">
+  <div class="wrap">
+    <span data-i18n="topbar">Demande reçue</span>
+    <a href="tel:+18196651515">819&nbsp;665-1515</a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="index.html">
+      <img class="logo" src="Assets/logo-site.svg" alt="Équipe Sirois Simard">
+    </a>
+    <div class="lang-switch" role="group" aria-label="Language">
+      <button type="button" data-lang="fr" class="is-active" aria-pressed="true">FR</button>
+      <button type="button" data-lang="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+</header>
+
+<main class="hero">
+  <div class="wrap">
+    <div class="card">
+      <div class="check" aria-hidden="true">&#10003;</div>
+      <div class="eyebrow" data-i18n="eyebrow">Demande envoyée</div>
+      <h1 data-i18n="title">Merci — Martin a bien reçu votre demande.</h1>
+      <p class="lead" data-i18n="lead">Il vous contactera rapidement avec des propriétés qui correspondent à vos critères. Aucun engagement de votre part.</p>
+      <ol class="steps">
+        <li><span class="n">1</span><span data-i18n="s1">Martin analyse votre secteur et votre budget</span></li>
+        <li><span class="n">2</span><span data-i18n="s2">Il prépare une sélection de propriétés ciblées</span></li>
+        <li><span class="n">3</span><span data-i18n="s3">Il vous rappelle pour planifier la suite</span></li>
+      </ol>
+      <a class="btn" href="tel:+18196651515" data-i18n="cta_call">Appeler Martin maintenant</a>
+      <div>
+        <a class="btn-outline" href="https://www.equipesiroissimard.com/proprietes/" data-i18n="cta_browse">Voir les propriétés en ligne</a>
+      </div>
+      <span class="phone" data-i18n-html="phone">Ou écrivez-lui : <strong>martin@equipesiroissimard.com</strong></span>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap" data-i18n="footer">© Équipe Sirois Simard · Royal LePage</div>
+</footer>
+
+<script>
+(() => {
+  const I18N = {
+    fr: {
+      meta_title: "Merci | Martin Simard — Équipe Sirois Simard",
+      topbar: "Demande reçue",
+      eyebrow: "Demande envoyée",
+      title: "Merci — Martin a bien reçu votre demande.",
+      lead: "Il vous contactera rapidement avec des propriétés qui correspondent à vos critères. Aucun engagement de votre part.",
+      s1: "Martin analyse votre secteur et votre budget",
+      s2: "Il prépare une sélection de propriétés ciblées",
+      s3: "Il vous rappelle pour planifier la suite",
+      cta_call: "Appeler Martin maintenant",
+      cta_browse: "Voir les propriétés en ligne",
+      phone: 'Ou écrivez-lui : <strong>martin@equipesiroissimard.com</strong>',
+      footer: "© Équipe Sirois Simard · Royal LePage"
+    },
+    en: {
+      meta_title: "Thank you | Martin Simard — Équipe Sirois Simard",
+      topbar: "Request received",
+      eyebrow: "Request sent",
+      title: "Thank you — Martin received your request.",
+      lead: "He will contact you shortly with properties that match your criteria. No obligation on your part.",
+      s1: "Martin reviews your area and budget",
+      s2: "He prepares a shortlist of matched listings",
+      s3: "He calls you to plan the next steps",
+      cta_call: "Call Martin now",
+      cta_browse: "Browse listings online",
+      phone: 'Or email him: <strong>martin@equipesiroissimard.com</strong>',
+      footer: "© Équipe Sirois Simard · Royal LePage"
+    }
+  };
+
+  const params = new URLSearchParams(window.location.search);
+  let lang = (params.get("lang") || localStorage.getItem("ms_lang") || "fr").toLowerCase();
+  if (lang !== "en" && lang !== "fr") lang = "fr";
+
+  function applyLang(next) {
+    lang = next;
+    localStorage.setItem("ms_lang", lang);
+    document.documentElement.lang = lang;
+    const t = I18N[lang];
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (t[key] != null) el.textContent = t[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-html");
+      if (t[key] != null) el.innerHTML = t[key];
+    });
+    document.title = t.meta_title;
+    document.querySelectorAll(".lang-switch button").forEach((btn) => {
+      const active = btn.getAttribute("data-lang") === lang;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  }
+
+  document.querySelectorAll(".lang-switch button").forEach((btn) => {
+    btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
+  });
+  applyLang(lang);
+
+  // Conversion events — fire on thank-you page (recommended for ads)
+  if (typeof fbq === "function") fbq("track", "Lead");
+  if (typeof gtag === "function") {
+    gtag("event", "generate_lead", { event_category: "landing_achat" });
+    // Ajoute ici ta conversion Google Ads, ex:
+    // gtag("event", "conversion", { send_to: "AW-XXXXXXXXX/YYYYYYYY" });
+  }
+})();
+</script>
+</body>
+</html>

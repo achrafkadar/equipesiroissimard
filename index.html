@@ -855,12 +855,11 @@
         await new Promise((r) => setTimeout(r, 500));
       }
 
-      form.classList.add("is-success");
-      successEl.textContent = t.form_success;
-      successEl.classList.add("is-visible");
-
-      if (typeof fbq === "function") fbq("track", "Lead");
-      if (typeof gtag === "function") gtag("event", "generate_lead", { event_category: "landing_achat" });
+      // Redirect to thank-you page (pixels fire there)
+      const thanks = new URL("merci.html", window.location.href);
+      thanks.searchParams.set("lang", lang);
+      window.location.href = thanks.toString();
+      return;
     } catch (err) {
       console.error(err);
       errorEl.textContent = t.form_error_net;
