@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-i18n="meta_title">Trouvez votre prochaine propriété à Gatineau | Martin Simard, courtier immobilier</title>
+<meta name="description" data-i18n-content="meta_desc" content="Martin Simard, #1 en Outaouais chez Royal LePage, vous aide à acheter la propriété qui vous convient. Recevez les propriétés qui correspondent à vos critères avant tout le monde.">
+<meta name="robots" content="noindex, nofollow">
+<style>
+  :root{
+    --rouge:#d53642;
+    --rouge-fonce:#b12a34;
+    --noir:#1a1c20;
+    --gris-fonce:#2b2e34;
+    --gris:#5c626b;
+    --gris-clair:#f4f5f7;
+    --blanc:#ffffff;
+    --bordure:#e2e4e8;
+    --ombre:0 10px 40px rgba(26,28,32,.10);
+    --ombre-forte:0 20px 60px rgba(26,28,32,.18);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Helvetica Neue",Arial,"Segoe UI",sans-serif;
+    color:var(--noir);
+    background:var(--blanc);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{line-height:1.15;font-weight:800;letter-spacing:-.01em}
+  img{max-width:100%;display:block}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px}
+
+  .topbar{background:var(--rouge);color:#fff;font-size:14px}
+  .topbar .wrap{display:flex;justify-content:space-between;align-items:center;height:44px;gap:16px}
+  .topbar a{color:#fff;font-weight:700;white-space:nowrap}
+  .topbar .tel strong{color:#fff}
+
+  header{background:var(--blanc);border-bottom:1px solid var(--bordure);position:sticky;top:0;z-index:50}
+  header .wrap{display:flex;justify-content:space-between;align-items:center;height:76px;gap:16px}
+  .logo{height:42px}
+  .header-actions{display:flex;align-items:center;gap:14px}
+  .lang-switch{
+    display:inline-flex;border:1.5px solid var(--bordure);border-radius:6px;overflow:hidden;background:#fff;
+  }
+  .lang-switch button{
+    appearance:none;border:none;background:transparent;font-family:inherit;font-weight:800;font-size:13px;
+    padding:8px 12px;cursor:pointer;color:var(--gris);letter-spacing:.04em;
+  }
+  .lang-switch button.is-active{background:var(--noir);color:#fff}
+  .btn{
+    display:inline-block;background:var(--rouge);color:#fff;font-weight:700;
+    padding:14px 26px;border-radius:6px;border:none;cursor:pointer;font-size:16px;
+    transition:background .18s ease,transform .18s ease;
+  }
+  .btn:hover{background:var(--rouge-fonce);transform:translateY(-1px)}
+  .btn-lg{padding:17px 34px;font-size:17px;width:100%}
+  header .btn{padding:11px 22px}
+
+  .hero{
+    position:relative;overflow:hidden;
+    background:
+      radial-gradient(1100px 520px at 88% -8%,rgba(213,54,66,.10) 0%,rgba(213,54,66,0) 60%),
+      linear-gradient(180deg,#fbfbfc 0%,#f4f5f7 100%);
+  }
+  .hero::before{content:"";position:absolute;top:0;left:0;right:0;height:5px;background:var(--rouge)}
+  .hero .wrap{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:52px;align-items:start;padding:64px 24px 72px}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:9px;background:#fff;
+    border:1px solid rgba(213,54,66,.28);color:var(--rouge);font-weight:800;font-size:13px;
+    letter-spacing:.05em;text-transform:uppercase;padding:8px 15px;border-radius:40px;margin-bottom:22px;
+    box-shadow:0 4px 14px rgba(213,54,66,.10);
+  }
+  .eyebrow .dot{width:8px;height:8px;border-radius:50%;background:var(--rouge)}
+  .hero h1{font-size:50px;margin-bottom:20px;color:var(--noir)}
+  .hero h1 .hl{color:var(--rouge)}
+  .hero p.lead{font-size:19px;color:var(--gris);max-width:520px;margin-bottom:26px}
+  .hero-points{list-style:none;margin-bottom:10px}
+  .hero-points li{display:flex;align-items:flex-start;gap:12px;margin-bottom:12px;font-size:16px;color:var(--gris-fonce);font-weight:500}
+  .hero-points .chk{
+    flex:0 0 24px;height:24px;border-radius:50%;background:var(--rouge);color:#fff;
+    display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:900;margin-top:1px
+  }
+  .hero-trust{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:22px}
+  .hero-trust .stars{color:var(--rouge);font-size:18px;letter-spacing:2px}
+  .hero-trust span:last-child{color:var(--gris-fonce);font-size:14.5px;font-weight:600}
+  .hero-right{position:relative}
+
+  .form-card{background:#fff;color:var(--noir);border-radius:12px;box-shadow:var(--ombre-forte);padding:32px 30px}
+  .form-card h2{font-size:23px;margin-bottom:6px}
+  .form-card .sub{font-size:14.5px;color:var(--gris);margin-bottom:22px}
+  .field{margin-bottom:15px}
+  .field label{display:block;font-size:13px;font-weight:700;margin-bottom:6px;color:var(--gris-fonce)}
+  .field input,.field select{
+    width:100%;padding:13px 14px;border:1.5px solid var(--bordure);border-radius:6px;
+    font-size:15px;font-family:inherit;color:var(--noir);background:#fff;transition:border-color .15s
+  }
+  .field input:focus,.field select:focus{outline:none;border-color:var(--rouge)}
+  .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+  .trust-mini{display:flex;align-items:center;gap:8px;justify-content:center;margin-top:16px;font-size:13px;color:var(--gris);font-weight:600}
+  .trust-mini svg{flex:0 0 auto}
+  .form-success{
+    display:none;margin-top:12px;padding:14px 16px;background:#eef8ee;border:1px solid #b5dcb5;
+    border-radius:8px;text-align:center;color:#1e5c1e;font-size:14.5px;font-weight:600;line-height:1.45
+  }
+  .form-success.is-visible{display:block}
+  .form-error{display:none;margin-top:10px;text-align:center;color:var(--rouge);font-size:13.5px;font-weight:600}
+  .form-error.is-visible{display:block}
+  .lead-form.is-success .field,
+  .lead-form.is-success .row2,
+  .lead-form.is-success .btn,
+  .lead-form.is-success .trust-mini,
+  .lead-form.is-success .sub{display:none}
+
+  .intro-martin{background:var(--gris-clair);border-bottom:1px solid var(--bordure)}
+  .im-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:52px;align-items:center}
+  .im-photo{position:relative}
+  .im-photo img{
+    width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center top;
+    border-radius:16px;box-shadow:var(--ombre);background:#fff
+  }
+  .im-photo-tag{
+    position:absolute;left:18px;bottom:18px;background:var(--rouge);color:#fff;
+    font-weight:800;font-size:15px;padding:12px 18px;border-radius:10px;
+    box-shadow:0 10px 24px rgba(213,54,66,.35)
+  }
+  .im-photo-tag small{display:block;font-weight:600;font-size:12px;opacity:.92;margin-top:2px}
+  .im-text .eyebrow2{color:var(--rouge);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+  .im-text h2{font-size:33px;margin-bottom:16px;color:var(--noir)}
+  .im-text h2 .hl{color:var(--rouge)}
+  .im-text > p{font-size:16.5px;color:var(--gris);margin-bottom:14px;max-width:560px}
+  .im-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:26px 0 28px}
+  .im-stat{background:#fff;border:1px solid var(--bordure);border-radius:10px;padding:18px 14px;text-align:center}
+  .im-stat .num{font-size:30px;font-weight:800;color:var(--rouge);letter-spacing:-.02em}
+  .im-stat .lbl{font-size:12.5px;color:var(--gris-fonce);font-weight:600;margin-top:5px;line-height:1.35}
+
+  section.pad{padding:78px 0}
+  .sec-head{text-align:center;max-width:720px;margin:0 auto 50px}
+  .sec-head .eyebrow2{color:var(--rouge);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;margin-bottom:12px}
+  .sec-head h2{font-size:34px;margin-bottom:14px}
+  .sec-head p{font-size:17px;color:var(--gris)}
+
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .step{background:#fff;border:1px solid var(--bordure);border-radius:12px;padding:34px 28px;transition:box-shadow .2s,transform .2s}
+  .step:hover{box-shadow:var(--ombre);transform:translateY(-3px)}
+  .step .n{
+    width:46px;height:46px;border-radius:10px;background:var(--rouge);color:#fff;
+    font-weight:800;font-size:20px;display:flex;align-items:center;justify-content:center;margin-bottom:18px
+  }
+  .step h3{font-size:19px;margin-bottom:9px}
+  .step p{font-size:15px;color:var(--gris)}
+
+  .why{background:var(--gris-clair);border-top:1px solid var(--bordure);border-bottom:1px solid var(--bordure)}
+  .why .grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center}
+  .why h2{font-size:34px;margin-bottom:18px;color:var(--noir)}
+  .why h2 .hl{color:var(--rouge)}
+  .why p.intro{font-size:17px;color:var(--gris);margin-bottom:26px}
+  .why-list{list-style:none}
+  .why-list li{display:flex;gap:14px;padding:16px 0;border-top:1px solid var(--bordure)}
+  .why-list li:last-child{border-bottom:1px solid var(--bordure)}
+  .why-list .ico{flex:0 0 40px;height:40px;border-radius:8px;background:rgba(213,54,66,.10);color:var(--rouge);display:flex;align-items:center;justify-content:center;font-weight:900;font-size:18px}
+  .why-list h4{font-size:16.5px;margin-bottom:3px;color:var(--noir)}
+  .why-list p{font-size:14.5px;color:var(--gris)}
+  .badges{background:#fff;color:var(--noir);border-radius:12px;padding:30px;box-shadow:var(--ombre)}
+  .badges .b{display:flex;align-items:center;gap:16px;padding:15px 0;border-bottom:1px solid var(--bordure)}
+  .badges .b:last-child{border-bottom:none}
+  .badges .b .medal{flex:0 0 52px;height:52px;border-radius:50%;background:var(--rouge);color:#fff;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:800}
+  .badges .b h4{font-size:16px;margin-bottom:1px}
+  .badges .b span{font-size:13.5px;color:var(--gris)}
+
+  .props{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .prop{border:1px solid var(--bordure);border-radius:12px;overflow:hidden;background:#fff;transition:box-shadow .2s,transform .2s}
+  .prop:hover{box-shadow:var(--ombre);transform:translateY(-3px)}
+  .prop .ph{aspect-ratio:4/3;background:var(--gris-clair);overflow:hidden}
+  .prop .ph img{width:100%;height:100%;object-fit:cover}
+  .prop .body{padding:18px 20px}
+  .prop .price{font-size:20px;font-weight:800;color:var(--rouge);margin-bottom:4px}
+  .prop .addr{font-size:14.5px;color:var(--gris-fonce);font-weight:600}
+  .prop .meta{font-size:13px;color:var(--gris);margin-top:8px}
+  .props-cta{text-align:center;margin-top:40px}
+
+  .testi{background:var(--gris-clair);border-top:1px solid var(--bordure);border-bottom:1px solid var(--bordure)}
+  .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  .testi-card{background:#fff;border:1px solid var(--bordure);border-radius:12px;padding:26px 24px;transition:box-shadow .2s,transform .2s}
+  .testi-card:hover{box-shadow:var(--ombre);transform:translateY(-3px)}
+  .testi .stars{color:var(--rouge);font-size:17px;letter-spacing:2px;margin-bottom:14px}
+  .testi blockquote{font-size:16px;font-weight:500;line-height:1.55;color:var(--gris-fonce);margin-bottom:16px}
+  .testi .who{font-size:14px;color:var(--noir);font-weight:700}
+
+  .final{background:linear-gradient(120deg,var(--rouge) 0%,var(--rouge-fonce) 100%);color:#fff;text-align:center}
+  .final h2{font-size:36px;margin-bottom:14px;color:#fff}
+  .final p{font-size:18px;color:#ffe1e3;max-width:600px;margin:0 auto 30px}
+  .final .btn-white{background:#fff;color:var(--rouge);font-size:18px;padding:17px 40px}
+  .final .btn-white:hover{background:#f5f5f5}
+  .final .tel-alt{display:block;margin-top:20px;font-size:16px;color:#fff;font-weight:600}
+  .final .tel-alt strong{font-size:20px}
+
+  footer{background:var(--gris-clair);color:var(--gris);font-size:14px;padding:44px 0 28px;border-top:1px solid var(--bordure)}
+  footer .grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;padding-bottom:30px;border-bottom:1px solid var(--bordure)}
+  footer h5{color:var(--noir);font-size:15px;margin-bottom:12px;font-weight:700}
+  footer a{color:var(--gris);display:block;margin-bottom:7px}
+  footer a:hover{color:var(--rouge)}
+  footer .foot-logo{height:38px;margin-bottom:14px}
+  footer .legal{padding-top:22px;font-size:12.5px;color:var(--gris);text-align:center;line-height:1.7}
+
+  @media(max-width:900px){
+    .hero .wrap{grid-template-columns:1fr;gap:34px;padding:48px 24px 52px}
+    .hero h1{font-size:38px}
+    .why .grid{grid-template-columns:1fr;gap:36px}
+    .im-grid{grid-template-columns:1fr;gap:32px}
+    .im-photo img{aspect-ratio:16/10}
+    .steps,.props{grid-template-columns:1fr}
+    .testi-grid{grid-template-columns:repeat(2,1fr)}
+    .topbar .hide-m{display:none}
+  }
+  @media(max-width:560px){
+    .hero h1{font-size:31px}
+    .hero p.lead{font-size:17px}
+    .sec-head h2{font-size:26px}
+    .why h2,.final h2{font-size:26px}
+    .row2{grid-template-columns:1fr}
+    header .btn-talk{display:none}
+    .form-card{padding:26px 22px}
+    .im-stats{grid-template-columns:repeat(2,1fr)}
+    .testi-grid{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <span class="hide-m" data-i18n="topbar_left">Courtier immobilier agréé · Gatineau &amp; Outaouais · Service bilingue</span>
+    <a class="tel" href="tel:+18196651515">Martin Simard · <strong>819&nbsp;665-1515</strong></a>
+  </div>
+</div>
+
+<header>
+  <div class="wrap">
+    <a href="https://www.equipesiroissimard.com/" aria-label="Équipe Sirois Simard">
+      <img class="logo" src="Assets/logo-site.svg" alt="Équipe Sirois Simard">
+    </a>
+    <div class="header-actions">
+      <div class="lang-switch" role="group" aria-label="Language">
+        <button type="button" data-lang="fr" class="is-active" aria-pressed="true">FR</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <a href="#formulaire" class="btn btn-talk" data-i18n="nav_cta">Parler à Martin</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow"><span class="dot"></span><span data-i18n="hero_eyebrow">#1 en Outaouais chez Royal LePage</span></span>
+      <h1 data-i18n-html="hero_h1">Trouvez la propriété <span class="hl">qui vous ressemble</span> à Gatineau et en Outaouais.</h1>
+      <p class="lead" data-i18n="hero_lead">Recevez les propriétés qui correspondent exactement à vos critères, souvent avant qu'elles apparaissent sur les portails publics. Accompagnement complet, du premier coup d'œil à la remise des clés.</p>
+      <ul class="hero-points">
+        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p1">Une sélection ciblée selon votre budget et vos besoins</span></li>
+        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p2">Un courtier natif de l'Outaouais qui connaît chaque secteur</span></li>
+        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p3">Service en français et en anglais, sans engagement</span></li>
+      </ul>
+      <div class="hero-trust">
+        <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span data-i18n="hero_trust">Plus de 25 ans à accompagner les acheteurs de la région.</span>
+      </div>
+    </div>
+
+    <div class="hero-right" id="formulaire">
+      <div class="form-card">
+        <h2 data-i18n="form_title">Recevez vos propriétés ciblées</h2>
+        <p class="sub" data-i18n="form_sub">Dites-moi ce que vous cherchez. Martin vous revient rapidement, sans engagement.</p>
+        <form class="lead-form" id="lead-form-buyer" novalidate>
+          <div class="field">
+            <label for="nom" data-i18n="label_name">Nom complet</label>
+            <input type="text" id="nom" name="nom" data-i18n-placeholder="ph_name" placeholder="Prénom et nom" required autocomplete="name">
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="tel" data-i18n="label_phone">Téléphone</label>
+              <input type="tel" id="tel" name="tel" placeholder="819 000-0000" required autocomplete="tel">
+            </div>
+            <div class="field">
+              <label for="courriel" data-i18n="label_email">Courriel</label>
+              <input type="email" id="courriel" name="courriel" data-i18n-placeholder="ph_email" placeholder="vous@courriel.com" required autocomplete="email">
+            </div>
+          </div>
+          <div class="row2">
+            <div class="field">
+              <label for="secteur" data-i18n="label_area">Secteur recherché</label>
+              <select id="secteur" name="secteur" required>
+                <option value="" disabled selected data-i18n="opt_choose">Choisir</option>
+                <option value="Gatineau (Hull)">Gatineau (Hull)</option>
+                <option value="Gatineau (Aylmer)">Gatineau (Aylmer)</option>
+                <option value="Gatineau (Gatineau)">Gatineau (Gatineau)</option>
+                <option value="Gatineau (Buckingham)">Gatineau (Buckingham)</option>
+                <option value="Val-des-Monts">Val-des-Monts</option>
+                <option value="Pontiac">Pontiac</option>
+                <option value="Autre" data-i18n="opt_other_area">Autre secteur de l'Outaouais</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="budget" data-i18n="label_budget">Budget approximatif</label>
+              <select id="budget" name="budget" required>
+                <option value="" disabled selected data-i18n="opt_choose">Choisir</option>
+                <option value="lt-300" data-i18n="opt_b1">Moins de 300 000 $</option>
+                <option value="300-450" data-i18n="opt_b2">300 000 $ – 450 000 $</option>
+                <option value="450-600" data-i18n="opt_b3">450 000 $ – 600 000 $</option>
+                <option value="600-800" data-i18n="opt_b4">600 000 $ – 800 000 $</option>
+                <option value="gt-800" data-i18n="opt_b5">Plus de 800 000 $</option>
+              </select>
+            </div>
+          </div>
+          <input type="hidden" name="source" value="landing-achat">
+          <input type="hidden" name="lang" id="form_lang" value="fr">
+          <input type="hidden" name="utm_source" id="utm_source">
+          <input type="hidden" name="utm_medium" id="utm_medium">
+          <input type="hidden" name="utm_campaign" id="utm_campaign">
+          <input type="hidden" name="utm_content" id="utm_content">
+          <input type="hidden" name="utm_term" id="utm_term">
+          <input type="hidden" name="gclid" id="gclid">
+          <input type="hidden" name="fbclid" id="fbclid">
+          <button type="submit" class="btn btn-lg" id="cta-submit-buyer" data-i18n="form_cta">Recevoir mes propriétés</button>
+          <p class="form-error" id="form-error" data-i18n="form_error">Veuillez remplir tous les champs obligatoires.</p>
+          <div class="form-success" id="form-success" data-i18n="form_success">Merci ! Martin vous contactera rapidement avec des propriétés ciblées.</div>
+        </form>
+        <div class="trust-mini">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V5l7-3z" fill="#d53642"/></svg>
+          <span data-i18n="form_trust">Vos informations restent confidentielles · Aucun engagement</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad intro-martin">
+  <div class="wrap">
+    <div class="im-grid">
+      <div class="im-photo">
+        <img src="Assets/martin-simard.jpg" alt="Martin Simard" width="480" height="600" data-i18n-alt="martin_alt">
+        <div class="im-photo-tag">Martin Simard<small data-i18n="martin_role">Courtier immobilier agréé</small></div>
+      </div>
+      <div class="im-text">
+        <div class="eyebrow2" data-i18n="martin_eyebrow">Votre courtier</div>
+        <h2 data-i18n-html="martin_h2">Martin Simard, <span class="hl">#1 en Outaouais</span> chez Royal LePage</h2>
+        <p data-i18n="martin_p1">Natif de l'Outaouais, Martin connaît la région de fond en comble. Après un diplôme en architecture, il débute sa carrière de courtier en 1997, puis obtient en 2008 les désignations de courtier immobilier agréé et de directeur d'agence.</p>
+        <p data-i18n="martin_p2">Toujours disponible et à l'écoute, il offre un service complet, transparent et entièrement bilingue. Il fait équipe avec vous, avant, pendant et après la transaction.</p>
+        <div class="im-stats">
+          <div class="im-stat"><div class="num">#1</div><div class="lbl" data-i18n="stat1">en Outaouais chez Royal LePage</div></div>
+          <div class="im-stat"><div class="num">1997</div><div class="lbl" data-i18n="stat2">en carrière depuis</div></div>
+          <div class="im-stat"><div class="num">FR / EN</div><div class="lbl" data-i18n="stat3">service entièrement bilingue</div></div>
+          <div class="im-stat"><div class="num" data-i18n="stat4_num">Élites</div><div class="lbl" data-i18n="stat4">membre à vie du Club national</div></div>
+        </div>
+        <a href="#formulaire" class="btn" data-i18n="martin_cta">Faire équipe avec Martin</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow2" data-i18n="steps_eyebrow">Simple et sans pression</div>
+      <h2 data-i18n="steps_h2">Trois étapes pour trouver votre propriété</h2>
+      <p data-i18n="steps_lead">Un processus clair, mené par un courtier qui fait équipe avec vous du début à la fin.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">1</div>
+        <h3 data-i18n="step1_h">Vous partagez vos critères</h3>
+        <p data-i18n="step1_p">Secteur, budget, type de propriété, besoins particuliers. Quelques minutes suffisent pour cerner ce qui compte pour vous.</p>
+      </div>
+      <div class="step">
+        <div class="n">2</div>
+        <h3 data-i18n="step2_h">Martin cible pour vous</h3>
+        <p data-i18n="step2_p">Il recherche activement votre nouvelle maison et vous présente des propriétés qui correspondent réellement, sans vous faire perdre de temps.</p>
+      </div>
+      <div class="step">
+        <div class="n">3</div>
+        <h3 data-i18n="step3_h">Vous visitez et achetez</h3>
+        <p data-i18n="step3_p">Négociation, inspection, paperasse légale : Martin vous accompagne à chaque étape jusqu'à la remise des clés.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad why">
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <h2 data-i18n-html="why_h2">Pourquoi acheter avec <span class="hl">Martin Simard</span></h2>
+        <p class="intro" data-i18n="why_intro">Natif de l'Outaouais, Martin connaît la région de fond en comble. Il traite chaque client comme il aimerait l'être : avec respect, écoute et transparence, avant, pendant et après la transaction.</p>
+        <ul class="why-list">
+          <li>
+            <div class="ico">&#9733;</div>
+            <div><h4 data-i18n="why1_h">Une connaissance réelle du terrain</h4><p data-i18n="why1_p">Formé en architecture, courtier depuis 1997, il évalue une propriété au-delà de la fiche descriptive.</p></div>
+          </li>
+          <li>
+            <div class="ico">&#9679;</div>
+            <div><h4 data-i18n="why2_h">Un accompagnement proactif</h4><p data-i18n="why2_p">Il fait la recherche à votre place et vous tient informé de chaque développement de votre dossier.</p></div>
+          </li>
+          <li>
+            <div class="ico">&#9993;</div>
+            <div><h4 data-i18n="why3_h">Toujours disponible</h4><p data-i18n="why3_p">Par téléphone, courriel ou texto, le suivi se fait rapidement, en français comme en anglais.</p></div>
+          </li>
+        </ul>
+      </div>
+      <div class="badges">
+        <div class="b">
+          <div class="medal">&#9733;</div>
+          <div><h4 data-i18n="badge1_h">#1 en Outaouais</h4><span data-i18n="badge1_p">Meilleur courtier vendeur chez Royal LePage</span></div>
+        </div>
+        <div class="b">
+          <div class="medal">10</div>
+          <div><h4 data-i18n="badge2_h">Club des 10 · Québec</h4><span data-i18n="badge2_p">Parmi les 10 premiers courtiers du Québec</span></div>
+        </div>
+        <div class="b">
+          <div class="medal">1%</div>
+          <div><h4 data-i18n="badge3_h">Club national des Élites</h4><span data-i18n="badge3_p">Membre à vie · premier 1 % au Québec</span></div>
+        </div>
+        <div class="b">
+          <div class="medal">FR</div>
+          <div><h4 data-i18n="badge4_h">Service bilingue</h4><span data-i18n="badge4_p">Accompagnement complet en FR et EN</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pad">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow2" data-i18n="props_eyebrow">Un aperçu du marché</div>
+      <h2 data-i18n="props_h2">Propriétés vedettes en Outaouais</h2>
+      <p data-i18n="props_lead">Un échantillon des propriétés actuellement suivies par Martin. Inscrivez-vous pour recevoir celles qui vous ressemblent.</p>
+    </div>
+    <div class="props">
+      <div class="prop">
+        <div class="ph"><img src="https://www.equipesiroissimard.com/wp-content/uploads/prosomo_centris/photos/20135451/1_t.jpg" alt="Pontiac"></div>
+        <div class="body"><div class="price">599 900 $</div><div class="addr">107, Ch. des Bouleaux, Pontiac</div><div class="meta" data-i18n="prop1_meta">5 chambres · secteur nature</div></div>
+      </div>
+      <div class="prop">
+        <div class="ph"><img src="https://www.equipesiroissimard.com/wp-content/uploads/prosomo_centris/photos/18622150/1_t.jpg" alt="Gatineau"></div>
+        <div class="body"><div class="price">444 900 $</div><div class="addr">307, Rue Davidson O., Gatineau</div><div class="meta" data-i18n="prop2_meta">3 chambres · 2 salles de bain</div></div>
+      </div>
+      <div class="prop">
+        <div class="ph"><img src="https://www.equipesiroissimard.com/wp-content/uploads/prosomo_centris/photos/16775400/1_t.jpg" alt="Notre-Dame-de-la-Salette"></div>
+        <div class="body"><div class="price">332 600 $</div><div class="addr">84, Ch. de la Rivière, N.-D.-de-la-Salette</div><div class="meta" data-i18n="prop3_meta">3 chambres · bord de rivière</div></div>
+      </div>
+    </div>
+    <div class="props-cta"><a href="#formulaire" class="btn" data-i18n="props_cta">Recevoir des propriétés comme celles-ci</a></div>
+  </div>
+</section>
+
+<section class="pad testi">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow2" data-i18n="testi_eyebrow">Ils ont fait équipe avec Martin</div>
+      <h2 data-i18n="testi_h2">Ce que disent ses clients</h2>
+      <p data-i18n="testi_lead">Des clients accompagnés de la première rencontre jusqu'à la conclusion de la transaction.</p>
+    </div>
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote data-i18n="t1">« J'ai bien été prise en main, bien conseillée, bien accompagnée avec beaucoup de respect et d'authenticité dans tous les suivis. Je recommande chaudement l'équipe Sirois-Simard. »</blockquote>
+        <div class="who">Denise</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote data-i18n="t2">« Martin a pris le temps de comprendre ce qu'on cherchait vraiment. Il nous a présenté des propriétés qui correspondaient, sans nous faire courir partout. »</blockquote>
+        <div class="who" data-i18n="t2_who">Client · Gatineau</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote data-i18n="t3">« Premier achat, beaucoup de questions. Martin a été patient, clair et disponible à chaque étape. On s'est sentis en confiance du début à la fin. »</blockquote>
+        <div class="who" data-i18n="t3_who">Client · Aylmer</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote data-i18n="t4">« Sa connaissance de l'Outaouais fait toute la différence. Il nous a orientés vers le bon secteur selon notre budget et notre style de vie. »</blockquote>
+        <div class="who" data-i18n="t4_who">Client · Val-des-Monts</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote data-i18n="t5">« Service impeccable en anglais comme en français. Négociation menée avec doigté, on a obtenu la propriété au bon prix. »</blockquote>
+        <div class="who" data-i18n="t5_who">Client · Hull</div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <blockquote data-i18n="t6">« Toujours joignable, par texto comme par téléphone. Les suivis étaient rapides et on n'a jamais eu à courir après l'information. »</blockquote>
+        <div class="who" data-i18n="t6_who">Client · Buckingham</div>
+      </div>
+    </div>
+    <div class="props-cta"><a href="https://www.equipesiroissimard.com/temoignages/" class="btn" data-i18n="testi_cta">Voir plus de témoignages</a></div>
+  </div>
+</section>
+
+<section class="pad final">
+  <div class="wrap">
+    <h2 data-i18n="final_h2">Prêt à trouver votre prochaine propriété&nbsp;?</h2>
+    <p data-i18n="final_p">Partagez vos critères en quelques minutes. Martin vous revient rapidement avec des propriétés qui vous conviennent, sans engagement.</p>
+    <a href="#formulaire" class="btn btn-white" data-i18n="final_cta">Commencer ma recherche</a>
+    <span class="tel-alt" data-i18n-html="final_tel">Ou appelez Martin directement : <strong>819&nbsp;665-1515</strong></span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="grid">
+      <div>
+        <img class="foot-logo" src="Assets/logo-site.svg" alt="Équipe Sirois Simard">
+        <p data-i18n-html="foot_about">Martin Simard, courtier immobilier agréé<br>Équipe Sirois Simard · Royal LePage</p>
+        <p style="margin-top:10px">500 boul. Gréber, suite 300<br>Gatineau (Québec) J8T 7W3</p>
+      </div>
+      <div>
+        <h5 data-i18n="foot_contact">Me joindre</h5>
+        <a href="tel:+18196651515">819 665-1515</a>
+        <a href="mailto:martin@equipesiroissimard.com">martin@equipesiroissimard.com</a>
+        <a href="tel:+18192461000" data-i18n="foot_team">Équipe : 819 246-1000</a>
+      </div>
+      <div>
+        <h5 data-i18n="foot_links">Liens</h5>
+        <a href="https://www.equipesiroissimard.com/acheter/" data-i18n="foot_buy">Acheter</a>
+        <a href="https://www.equipesiroissimard.com/proprietes/" data-i18n="foot_props">Toutes les propriétés</a>
+        <a href="https://www.equipesiroissimard.com/equipe/martin-simard/" data-i18n="foot_profile">Profil de Martin</a>
+        <a href="https://www.equipesiroissimard.com/contact/">Contact</a>
+      </div>
+    </div>
+    <div class="legal" data-i18n="foot_legal">© Équipe Sirois Simard, Courtiers immobiliers agréés · Royal LePage. Cette page est un outil de mise en relation. Aucun engagement n'est pris tant qu'un mandat n'est pas signé.</div>
+  </div>
+</footer>
+
+<script>
+(() => {
+  const WEBHOOK_URL = "";
+
+  const I18N = {
+    fr: {
+      meta_title: "Trouvez votre prochaine propriété à Gatineau | Martin Simard, courtier immobilier",
+      meta_desc: "Martin Simard, #1 en Outaouais chez Royal LePage, vous aide à acheter la propriété qui vous convient. Recevez les propriétés qui correspondent à vos critères avant tout le monde.",
+      topbar_left: "Courtier immobilier agréé · Gatineau & Outaouais · Service bilingue",
+      nav_cta: "Parler à Martin",
+      hero_eyebrow: "#1 en Outaouais chez Royal LePage",
+      hero_h1: 'Trouvez la propriété <span class="hl">qui vous ressemble</span> à Gatineau et en Outaouais.',
+      hero_lead: "Recevez les propriétés qui correspondent exactement à vos critères, souvent avant qu'elles apparaissent sur les portails publics. Accompagnement complet, du premier coup d'œil à la remise des clés.",
+      hero_p1: "Une sélection ciblée selon votre budget et vos besoins",
+      hero_p2: "Un courtier natif de l'Outaouais qui connaît chaque secteur",
+      hero_p3: "Service en français et en anglais, sans engagement",
+      hero_trust: "Plus de 25 ans à accompagner les acheteurs de la région.",
+      form_title: "Recevez vos propriétés ciblées",
+      form_sub: "Dites-moi ce que vous cherchez. Martin vous revient rapidement, sans engagement.",
+      label_name: "Nom complet",
+      label_phone: "Téléphone",
+      label_email: "Courriel",
+      label_area: "Secteur recherché",
+      label_budget: "Budget approximatif",
+      ph_name: "Prénom et nom",
+      ph_email: "vous@courriel.com",
+      opt_choose: "Choisir",
+      opt_other_area: "Autre secteur de l'Outaouais",
+      opt_b1: "Moins de 300 000 $",
+      opt_b2: "300 000 $ – 450 000 $",
+      opt_b3: "450 000 $ – 600 000 $",
+      opt_b4: "600 000 $ – 800 000 $",
+      opt_b5: "Plus de 800 000 $",
+      form_cta: "Recevoir mes propriétés",
+      form_sending: "Envoi en cours…",
+      form_error: "Veuillez remplir tous les champs obligatoires.",
+      form_error_net: "Une erreur est survenue. Appelez-nous au 819 665-1515.",
+      form_success: "Merci ! Martin vous contactera rapidement avec des propriétés ciblées.",
+      form_trust: "Vos informations restent confidentielles · Aucun engagement",
+      martin_alt: "Martin Simard, courtier immobilier agréé",
+      martin_role: "Courtier immobilier agréé",
+      martin_eyebrow: "Votre courtier",
+      martin_h2: 'Martin Simard, <span class="hl">#1 en Outaouais</span> chez Royal LePage',
+      martin_p1: "Natif de l'Outaouais, Martin connaît la région de fond en comble. Après un diplôme en architecture, il débute sa carrière de courtier en 1997, puis obtient en 2008 les désignations de courtier immobilier agréé et de directeur d'agence.",
+      martin_p2: "Toujours disponible et à l'écoute, il offre un service complet, transparent et entièrement bilingue. Il fait équipe avec vous, avant, pendant et après la transaction.",
+      stat1: "en Outaouais chez Royal LePage",
+      stat2: "en carrière depuis",
+      stat3: "service entièrement bilingue",
+      stat4_num: "Élites",
+      stat4: "membre à vie du Club national",
+      martin_cta: "Faire équipe avec Martin",
+      steps_eyebrow: "Simple et sans pression",
+      steps_h2: "Trois étapes pour trouver votre propriété",
+      steps_lead: "Un processus clair, mené par un courtier qui fait équipe avec vous du début à la fin.",
+      step1_h: "Vous partagez vos critères",
+      step1_p: "Secteur, budget, type de propriété, besoins particuliers. Quelques minutes suffisent pour cerner ce qui compte pour vous.",
+      step2_h: "Martin cible pour vous",
+      step2_p: "Il recherche activement votre nouvelle maison et vous présente des propriétés qui correspondent réellement, sans vous faire perdre de temps.",
+      step3_h: "Vous visitez et achetez",
+      step3_p: "Négociation, inspection, paperasse légale : Martin vous accompagne à chaque étape jusqu'à la remise des clés.",
+      why_h2: 'Pourquoi acheter avec <span class="hl">Martin Simard</span>',
+      why_intro: "Natif de l'Outaouais, Martin connaît la région de fond en comble. Il traite chaque client comme il aimerait l'être : avec respect, écoute et transparence, avant, pendant et après la transaction.",
+      why1_h: "Une connaissance réelle du terrain",
+      why1_p: "Formé en architecture, courtier depuis 1997, il évalue une propriété au-delà de la fiche descriptive.",
+      why2_h: "Un accompagnement proactif",
+      why2_p: "Il fait la recherche à votre place et vous tient informé de chaque développement de votre dossier.",
+      why3_h: "Toujours disponible",
+      why3_p: "Par téléphone, courriel ou texto, le suivi se fait rapidement, en français comme en anglais.",
+      badge1_h: "#1 en Outaouais",
+      badge1_p: "Meilleur courtier vendeur chez Royal LePage",
+      badge2_h: "Club des 10 · Québec",
+      badge2_p: "Parmi les 10 premiers courtiers du Québec",
+      badge3_h: "Club national des Élites",
+      badge3_p: "Membre à vie · premier 1 % au Québec",
+      badge4_h: "Service bilingue",
+      badge4_p: "Accompagnement complet en FR et EN",
+      props_eyebrow: "Un aperçu du marché",
+      props_h2: "Propriétés vedettes en Outaouais",
+      props_lead: "Un échantillon des propriétés actuellement suivies par Martin. Inscrivez-vous pour recevoir celles qui vous ressemblent.",
+      prop1_meta: "5 chambres · secteur nature",
+      prop2_meta: "3 chambres · 2 salles de bain",
+      prop3_meta: "3 chambres · bord de rivière",
+      props_cta: "Recevoir des propriétés comme celles-ci",
+      testi_eyebrow: "Ils ont fait équipe avec Martin",
+      testi_h2: "Ce que disent ses clients",
+      testi_lead: "Des clients accompagnés de la première rencontre jusqu'à la conclusion de la transaction.",
+      t1: "« J'ai bien été prise en main, bien conseillée, bien accompagnée avec beaucoup de respect et d'authenticité dans tous les suivis. Je recommande chaudement l'équipe Sirois-Simard. »",
+      t2: "« Martin a pris le temps de comprendre ce qu'on cherchait vraiment. Il nous a présenté des propriétés qui correspondaient, sans nous faire courir partout. »",
+      t2_who: "Client · Gatineau",
+      t3: "« Premier achat, beaucoup de questions. Martin a été patient, clair et disponible à chaque étape. On s'est sentis en confiance du début à la fin. »",
+      t3_who: "Client · Aylmer",
+      t4: "« Sa connaissance de l'Outaouais fait toute la différence. Il nous a orientés vers le bon secteur selon notre budget et notre style de vie. »",
+      t4_who: "Client · Val-des-Monts",
+      t5: "« Service impeccable en anglais comme en français. Négociation menée avec doigté, on a obtenu la propriété au bon prix. »",
+      t5_who: "Client · Hull",
+      t6: "« Toujours joignable, par texto comme par téléphone. Les suivis étaient rapides et on n'a jamais eu à courir après l'information. »",
+      t6_who: "Client · Buckingham",
+      testi_cta: "Voir plus de témoignages",
+      final_h2: "Prêt à trouver votre prochaine propriété ?",
+      final_p: "Partagez vos critères en quelques minutes. Martin vous revient rapidement avec des propriétés qui vous conviennent, sans engagement.",
+      final_cta: "Commencer ma recherche",
+      final_tel: 'Ou appelez Martin directement : <strong>819&nbsp;665-1515</strong>',
+      foot_about: "Martin Simard, courtier immobilier agréé<br>Équipe Sirois Simard · Royal LePage",
+      foot_contact: "Me joindre",
+      foot_team: "Équipe : 819 246-1000",
+      foot_links: "Liens",
+      foot_buy: "Acheter",
+      foot_props: "Toutes les propriétés",
+      foot_profile: "Profil de Martin",
+      foot_legal: "© Équipe Sirois Simard, Courtiers immobiliers agréés · Royal LePage. Cette page est un outil de mise en relation. Aucun engagement n'est pris tant qu'un mandat n'est pas signé."
+    },
+    en: {
+      meta_title: "Find your next property in Gatineau | Martin Simard, real estate broker",
+      meta_desc: "Martin Simard, #1 in the Outaouais at Royal LePage, helps you buy the right property. Get listings that match your criteria before everyone else.",
+      topbar_left: "Licensed real estate broker · Gatineau & Outaouais · Bilingual service",
+      nav_cta: "Talk to Martin",
+      hero_eyebrow: "#1 in the Outaouais at Royal LePage",
+      hero_h1: 'Find the property <span class="hl">that fits you</span> in Gatineau and the Outaouais.',
+      hero_lead: "Get listings that match your criteria exactly—often before they appear on public portals. Full support from the first viewing to the keys.",
+      hero_p1: "A targeted selection based on your budget and needs",
+      hero_p2: "A broker raised in the Outaouais who knows every area",
+      hero_p3: "Service in French and English, no obligation",
+      hero_trust: "Over 25 years helping buyers across the region.",
+      form_title: "Get your matched listings",
+      form_sub: "Tell me what you're looking for. Martin will get back to you quickly, no obligation.",
+      label_name: "Full name",
+      label_phone: "Phone",
+      label_email: "Email",
+      label_area: "Preferred area",
+      label_budget: "Approximate budget",
+      ph_name: "First and last name",
+      ph_email: "you@email.com",
+      opt_choose: "Select",
+      opt_other_area: "Other Outaouais area",
+      opt_b1: "Under $300,000",
+      opt_b2: "$300,000 – $450,000",
+      opt_b3: "$450,000 – $600,000",
+      opt_b4: "$600,000 – $800,000",
+      opt_b5: "Over $800,000",
+      form_cta: "Get my listings",
+      form_sending: "Sending…",
+      form_error: "Please fill in all required fields.",
+      form_error_net: "Something went wrong. Call us at 819 665-1515.",
+      form_success: "Thank you! Martin will contact you shortly with matched listings.",
+      form_trust: "Your information stays private · No obligation",
+      martin_alt: "Martin Simard, licensed real estate broker",
+      martin_role: "Licensed real estate broker",
+      martin_eyebrow: "Your broker",
+      martin_h2: 'Martin Simard, <span class="hl">#1 in the Outaouais</span> at Royal LePage',
+      martin_p1: "Born and raised in the Outaouais, Martin knows the region inside out. After training in architecture, he started his real estate career in 1997 and earned his licensed broker and agency director designations in 2008.",
+      martin_p2: "Always available and attentive, he offers a complete, transparent, fully bilingual service. He partners with you before, during, and after the transaction.",
+      stat1: "in the Outaouais at Royal LePage",
+      stat2: "in business since",
+      stat3: "fully bilingual service",
+      stat4_num: "Elites",
+      stat4: "lifetime National Club member",
+      martin_cta: "Partner with Martin",
+      steps_eyebrow: "Simple and pressure-free",
+      steps_h2: "Three steps to find your property",
+      steps_lead: "A clear process led by a broker who partners with you from start to finish.",
+      step1_h: "You share your criteria",
+      step1_p: "Area, budget, property type, must-haves. A few minutes is enough to clarify what matters to you.",
+      step2_h: "Martin targets for you",
+      step2_p: "He actively searches for your next home and presents properties that truly fit—without wasting your time.",
+      step3_h: "You visit and buy",
+      step3_p: "Negotiation, inspection, legal paperwork: Martin supports you every step until you get the keys.",
+      why_h2: 'Why buy with <span class="hl">Martin Simard</span>',
+      why_intro: "Born in the Outaouais, Martin knows the region thoroughly. He treats every client the way he'd want to be treated: with respect, listening, and transparency—before, during, and after the sale.",
+      why1_h: "Real local expertise",
+      why1_p: "Trained in architecture and a broker since 1997, he evaluates a property beyond the listing sheet.",
+      why2_h: "Proactive support",
+      why2_p: "He does the search for you and keeps you informed of every development on your file.",
+      why3_h: "Always available",
+      why3_p: "By phone, email, or text—follow-up is fast, in French and English.",
+      badge1_h: "#1 in the Outaouais",
+      badge1_p: "Top selling broker at Royal LePage",
+      badge2_h: "Club of 10 · Quebec",
+      badge2_p: "Among Quebec's top 10 brokers",
+      badge3_h: "National Club of Elites",
+      badge3_p: "Lifetime member · top 1% in Quebec",
+      badge4_h: "Bilingual service",
+      badge4_p: "Full support in French and English",
+      props_eyebrow: "A market snapshot",
+      props_h2: "Featured properties in the Outaouais",
+      props_lead: "A sample of listings currently followed by Martin. Sign up to receive ones that match you.",
+      prop1_meta: "5 bedrooms · nature area",
+      prop2_meta: "3 bedrooms · 2 bathrooms",
+      prop3_meta: "3 bedrooms · riverside",
+      props_cta: "Get listings like these",
+      testi_eyebrow: "They partnered with Martin",
+      testi_h2: "What his clients say",
+      testi_lead: "Clients supported from the first meeting through closing.",
+      t1: '"I was well taken care of, well advised, and well supported with a lot of respect and authenticity in every follow-up. I warmly recommend the Sirois-Simard team."',
+      t2: '"Martin took the time to understand what we were really looking for. He showed us properties that fit—without running us all over town."',
+      t2_who: "Client · Gatineau",
+      t3: '"First purchase, lots of questions. Martin was patient, clear, and available at every step. We felt confident from start to finish."',
+      t3_who: "Client · Aylmer",
+      t4: '"His knowledge of the Outaouais makes all the difference. He guided us to the right area for our budget and lifestyle."',
+      t4_who: "Client · Val-des-Monts",
+      t5: '"Impeccable service in English and French. Negotiation handled with care—we got the property at the right price."',
+      t5_who: "Client · Hull",
+      t6: '"Always reachable by text or phone. Follow-ups were fast and we never had to chase information."',
+      t6_who: "Client · Buckingham",
+      testi_cta: "See more testimonials",
+      final_h2: "Ready to find your next property?",
+      final_p: "Share your criteria in a few minutes. Martin will get back quickly with listings that fit—no obligation.",
+      final_cta: "Start my search",
+      final_tel: 'Or call Martin directly: <strong>819&nbsp;665-1515</strong>',
+      foot_about: "Martin Simard, licensed real estate broker<br>Équipe Sirois Simard · Royal LePage",
+      foot_contact: "Contact me",
+      foot_team: "Team: 819 246-1000",
+      foot_links: "Links",
+      foot_buy: "Buy",
+      foot_props: "All properties",
+      foot_profile: "Martin's profile",
+      foot_legal: "© Équipe Sirois Simard, Licensed real estate brokers · Royal LePage. This page is a lead connection tool. No obligation until a mandate is signed."
+    }
+  };
+
+  let lang = "fr";
+  const params = new URLSearchParams(window.location.search);
+  const fromUrl = (params.get("lang") || "").toLowerCase();
+  const fromStore = (localStorage.getItem("ms_lang") || "").toLowerCase();
+  if (fromUrl === "en" || fromUrl === "fr") lang = fromUrl;
+  else if (fromStore === "en" || fromStore === "fr") lang = fromStore;
+
+  function applyLang(next) {
+    lang = next;
+    localStorage.setItem("ms_lang", lang);
+    document.documentElement.lang = lang;
+    const t = I18N[lang];
+
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      if (t[key] != null) el.textContent = t[key];
+    });
+    document.querySelectorAll("[data-i18n-html]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-html");
+      if (t[key] != null) el.innerHTML = t[key];
+    });
+    document.querySelectorAll("[data-i18n-placeholder]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-placeholder");
+      if (t[key] != null) el.setAttribute("placeholder", t[key]);
+    });
+    document.querySelectorAll("[data-i18n-alt]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-alt");
+      if (t[key] != null) el.setAttribute("alt", t[key]);
+    });
+    document.querySelectorAll("[data-i18n-content]").forEach((el) => {
+      const key = el.getAttribute("data-i18n-content");
+      if (t[key] != null) el.setAttribute("content", t[key]);
+    });
+
+    const titleEl = document.querySelector("title[data-i18n]");
+    if (titleEl && t.meta_title) document.title = t.meta_title;
+
+    const langField = document.getElementById("form_lang");
+    if (langField) langField.value = lang;
+
+    document.querySelectorAll(".lang-switch button").forEach((btn) => {
+      const active = btn.getAttribute("data-lang") === lang;
+      btn.classList.toggle("is-active", active);
+      btn.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+
+    // Keep URL shareable
+    const url = new URL(window.location.href);
+    url.searchParams.set("lang", lang);
+    history.replaceState({}, "", url);
+  }
+
+  document.querySelectorAll(".lang-switch button").forEach((btn) => {
+    btn.addEventListener("click", () => applyLang(btn.getAttribute("data-lang")));
+  });
+
+  applyLang(lang);
+
+  ["utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"].forEach((key) => {
+    const el = document.getElementById(key);
+    const value = params.get(key);
+    if (el && value) el.value = value;
+  });
+
+  const form = document.getElementById("lead-form-buyer");
+  const submitBtn = document.getElementById("cta-submit-buyer");
+  const errorEl = document.getElementById("form-error");
+  const successEl = document.getElementById("form-success");
+  if (!form) return;
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    errorEl.classList.remove("is-visible");
+    const t = I18N[lang];
+
+    if (!form.checkValidity()) {
+      errorEl.textContent = t.form_error;
+      errorEl.classList.add("is-visible");
+      form.reportValidity();
+      return;
+    }
+
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.submitted_at = new Date().toISOString();
+    data.page_url = window.location.href;
+    data.lang = lang;
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = t.form_sending;
+
+    try {
+      if (WEBHOOK_URL) {
+        const res = await fetch(WEBHOOK_URL, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        });
+        if (!res.ok) throw new Error("Webhook error");
+      } else {
+        console.info("[Lead Achat]", data);
+        await new Promise((r) => setTimeout(r, 500));
+      }
+
+      form.classList.add("is-success");
+      successEl.textContent = t.form_success;
+      successEl.classList.add("is-visible");
+
+      if (typeof fbq === "function") fbq("track", "Lead");
+      if (typeof gtag === "function") gtag("event", "generate_lead", { event_category: "landing_achat" });
+    } catch (err) {
+      console.error(err);
+      errorEl.textContent = t.form_error_net;
+      errorEl.classList.add("is-visible");
+      submitBtn.disabled = false;
+      submitBtn.textContent = t.form_cta;
+    }
+  });
+})();
+</script>
+</body>
+</html>

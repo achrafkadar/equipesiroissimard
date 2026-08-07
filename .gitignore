@@ -1,0 +1,22 @@
+.DS_Store
+**/._*
+Thumbs.db
+*.log
+.env
+.env.*
+!.env.example
+node_modules/
+.vscode/
+.idea/
+*.local
+
+# Originaux / doublons (on garde les noms propres)
+Assets/Bard, Michel 2021.jpg
+Assets/Fernande-back-blanc.jpg
+Assets/JULIE DAOUST.jpg
+Assets/Joly,Luc_DSC4814 fichier 5x7.jpg
+Assets/Martin (2-d).jpg
+Assets/*.pdf
+Assets/*nouveau Logo*
+Assets/*SIROIS SIMARD 2025*
+Assets/*RLP MD*
