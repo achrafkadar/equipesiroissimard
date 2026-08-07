@@ -10,8 +10,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title data-i18n="meta_title">Trouvez votre prochaine propriété à Gatineau | Martin Simard, courtier immobilier</title>
-<meta name="description" data-i18n-content="meta_desc" content="Martin Simard, #1 en Outaouais chez Royal LePage, vous aide à acheter la propriété qui vous convient. Recevez les propriétés qui correspondent à vos critères avant tout le monde.">
+<title data-i18n="meta_title">Vendre votre propriété à Gatineau | Martin Simard, courtier immobilier</title>
+<meta name="description" data-i18n-content="meta_desc" content="Martin Simard, #1 en Outaouais chez Royal LePage, vous aide à vendre au meilleur prix. Estimation gratuite et stratégie de mise en marché, sans engagement.">
 <meta name="robots" content="noindex, nofollow">
 <style>
   :root{
@@ -267,24 +267,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div>
       <span class="eyebrow"><span class="dot"></span><span data-i18n="hero_eyebrow">#1 en Outaouais chez Royal LePage</span></span>
-      <h1 data-i18n-html="hero_h1">Trouvez la propriété <span class="hl">qui vous ressemble</span> à Gatineau et en Outaouais.</h1>
-      <p class="lead" data-i18n="hero_lead">Recevez les propriétés qui correspondent exactement à vos critères, souvent avant qu'elles apparaissent sur les portails publics. Accompagnement complet, du premier coup d'œil à la remise des clés.</p>
+      <h1 data-i18n-html="hero_h1">Vendez votre propriété <span class="hl">au bon prix</span> à Gatineau et en Outaouais.</h1>
+      <p class="lead" data-i18n="hero_lead">Obtenez une estimation claire et une stratégie de mise en marché adaptée à votre secteur. Martin vous accompagne de l'évaluation jusqu'à la signature chez le notaire.</p>
       <ul class="hero-points">
-        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p1">Une sélection ciblée selon votre budget et vos besoins</span></li>
-        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p2">Un courtier natif de l'Outaouais qui connaît chaque secteur</span></li>
-        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p3">Service en français et en anglais, sans engagement</span></li>
+        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p1">Estimation basée sur les ventes comparables de votre secteur</span></li>
+        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p2">Mise en marché pro : photos, diffusion et négociation</span></li>
+        <li><span class="chk">&#10003;</span> <span data-i18n="hero_p3">Service bilingue, sans engagement pour démarrer</span></li>
       </ul>
       <div class="hero-trust">
         <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-        <span data-i18n="hero_trust">Plus de 25 ans à accompagner les acheteurs de la région.</span>
+        <span data-i18n="hero_trust">Plus de 25 ans à accompagner les vendeurs de la région.</span>
       </div>
     </div>
 
     <div class="hero-right" id="formulaire">
       <div class="form-card">
-        <h2 data-i18n="form_title">Recevez vos propriétés ciblées</h2>
-        <p class="sub" data-i18n="form_sub">Dites-moi ce que vous cherchez. Martin vous revient rapidement, sans engagement.</p>
-        <form class="lead-form" id="lead-form-buyer" novalidate>
+        <h2 data-i18n="form_title">Obtenez votre estimation gratuite</h2>
+        <p class="sub" data-i18n="form_sub">Parlez-nous de votre propriété. Martin vous revient rapidement avec une évaluation claire, sans engagement.</p>
+        <form class="lead-form" id="lead-form-seller" novalidate>
           <div class="field">
             <label for="nom" data-i18n="label_name">Nom complet</label>
             <input type="text" id="nom" name="nom" data-i18n-placeholder="ph_name" placeholder="Prénom et nom" required autocomplete="name">
@@ -299,9 +299,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <input type="email" id="courriel" name="courriel" data-i18n-placeholder="ph_email" placeholder="vous@courriel.com" required autocomplete="email">
             </div>
           </div>
+          <div class="field">
+            <label for="adresse" data-i18n="label_address">Adresse de la propriété</label>
+            <input type="text" id="adresse" name="adresse" data-i18n-placeholder="ph_address" placeholder="N°, rue, ville" required autocomplete="street-address">
+          </div>
           <div class="row2">
             <div class="field">
-              <label for="secteur" data-i18n="label_area">Secteur recherché</label>
+              <label for="secteur" data-i18n="label_area">Secteur</label>
               <select id="secteur" name="secteur" required>
                 <option value="" disabled selected data-i18n="opt_choose">Choisir</option>
                 <option value="Gatineau (Hull)">Gatineau (Hull)</option>
@@ -314,18 +318,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               </select>
             </div>
             <div class="field">
-              <label for="budget" data-i18n="label_budget">Budget approximatif</label>
-              <select id="budget" name="budget" required>
+              <label for="delai" data-i18n="label_timeline">Quand souhaitez-vous vendre&nbsp;?</label>
+              <select id="delai" name="delai" required>
                 <option value="" disabled selected data-i18n="opt_choose">Choisir</option>
-                <option value="lt-300" data-i18n="opt_b1">Moins de 300 000 $</option>
-                <option value="300-450" data-i18n="opt_b2">300 000 $ – 450 000 $</option>
-                <option value="450-600" data-i18n="opt_b3">450 000 $ – 600 000 $</option>
-                <option value="600-800" data-i18n="opt_b4">600 000 $ – 800 000 $</option>
-                <option value="gt-800" data-i18n="opt_b5">Plus de 800 000 $</option>
+                <option value="asap" data-i18n="opt_t1">Dès que possible</option>
+                <option value="1-3m" data-i18n="opt_t2">Dans 1 à 3 mois</option>
+                <option value="3-6m" data-i18n="opt_t3">Dans 3 à 6 mois</option>
+                <option value="6m+" data-i18n="opt_t4">Dans 6 mois ou plus</option>
+                <option value="curious" data-i18n="opt_t5">Je veux seulement une estimation</option>
               </select>
             </div>
           </div>
-          <input type="hidden" name="source" value="landing-achat">
+          <input type="hidden" name="source" value="landing-vente">
           <input type="hidden" name="lang" id="form_lang" value="fr">
           <input type="hidden" name="utm_source" id="utm_source">
           <input type="hidden" name="utm_medium" id="utm_medium">
@@ -334,9 +338,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <input type="hidden" name="utm_term" id="utm_term">
           <input type="hidden" name="gclid" id="gclid">
           <input type="hidden" name="fbclid" id="fbclid">
-          <button type="submit" class="btn btn-lg" id="cta-submit-buyer" data-i18n="form_cta">Recevoir mes propriétés</button>
+          <button type="submit" class="btn btn-lg" id="cta-submit-seller" data-i18n="form_cta">Obtenir mon estimation</button>
           <p class="form-error" id="form-error" data-i18n="form_error">Veuillez remplir tous les champs obligatoires.</p>
-          <div class="form-success" id="form-success" data-i18n="form_success">Merci ! Martin vous contactera rapidement avec des propriétés ciblées.</div>
+          <div class="form-success" id="form-success" data-i18n="form_success">Merci ! Martin vous contactera rapidement pour votre estimation.</div>
         </form>
         <div class="trust-mini">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 2l7 3v6c0 5-3.5 8.5-7 10-3.5-1.5-7-5-7-10V5l7-3z" fill="#d53642"/></svg>
@@ -375,24 +379,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow2" data-i18n="steps_eyebrow">Simple et sans pression</div>
-      <h2 data-i18n="steps_h2">Trois étapes pour trouver votre propriété</h2>
-      <p data-i18n="steps_lead">Un processus clair, mené par un courtier qui fait équipe avec vous du début à la fin.</p>
+      <h2 data-i18n="steps_h2">Trois étapes pour vendre avec confiance</h2>
+      <p data-i18n="steps_lead">Un processus clair, mené par un courtier qui fait équipe avec vous du premier appel jusqu'à la vente.</p>
     </div>
     <div class="steps">
       <div class="step">
         <div class="n">1</div>
-        <h3 data-i18n="step1_h">Vous partagez vos critères</h3>
-        <p data-i18n="step1_p">Secteur, budget, type de propriété, besoins particuliers. Quelques minutes suffisent pour cerner ce qui compte pour vous.</p>
+        <h3 data-i18n="step1_h">Vous demandez votre estimation</h3>
+        <p data-i18n="step1_p">Adresse, secteur et échéancier. Quelques minutes suffisent pour lancer une évaluation réaliste de votre propriété.</p>
       </div>
       <div class="step">
         <div class="n">2</div>
-        <h3 data-i18n="step2_h">Martin cible pour vous</h3>
-        <p data-i18n="step2_p">Il recherche activement votre nouvelle maison et vous présente des propriétés qui correspondent réellement, sans vous faire perdre de temps.</p>
+        <h3 data-i18n="step2_h">Martin prépare la stratégie</h3>
+        <p data-i18n="step2_p">Prix recommandé, plan de mise en marché et préparation de la propriété pour attirer les bons acheteurs.</p>
       </div>
       <div class="step">
         <div class="n">3</div>
-        <h3 data-i18n="step3_h">Vous visitez et achetez</h3>
-        <p data-i18n="step3_p">Négociation, inspection, paperasse légale : Martin vous accompagne à chaque étape jusqu'à la remise des clés.</p>
+        <h3 data-i18n="step3_h">Vous vendez au bon prix</h3>
+        <p data-i18n="step3_p">Diffusion, visites, négociation et suivi jusqu'à la signature chez le notaire — Martin gère chaque étape.</p>
       </div>
     </div>
   </div>
@@ -402,16 +406,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="wrap">
     <div class="grid">
       <div>
-        <h2 data-i18n-html="why_h2">Pourquoi acheter avec <span class="hl">Martin Simard</span></h2>
+        <h2 data-i18n-html="why_h2">Pourquoi vendre avec <span class="hl">Martin Simard</span></h2>
         <p class="intro" data-i18n="why_intro">Natif de l'Outaouais, Martin connaît la région de fond en comble. Il traite chaque client comme il aimerait l'être : avec respect, écoute et transparence, avant, pendant et après la transaction.</p>
         <ul class="why-list">
           <li>
             <div class="ico">&#9733;</div>
-            <div><h4 data-i18n="why1_h">Une connaissance réelle du terrain</h4><p data-i18n="why1_p">Formé en architecture, courtier depuis 1997, il évalue une propriété au-delà de la fiche descriptive.</p></div>
+            <div><h4 data-i18n="why1_h">Une évaluation ancrée dans le marché</h4><p data-i18n="why1_p">Formé en architecture, courtier depuis 1997, il positionne votre prix selon les ventes réelles de votre secteur.</p></div>
           </li>
           <li>
             <div class="ico">&#9679;</div>
-            <div><h4 data-i18n="why2_h">Un accompagnement proactif</h4><p data-i18n="why2_p">Il fait la recherche à votre place et vous tient informé de chaque développement de votre dossier.</p></div>
+            <div><h4 data-i18n="why2_h">Une mise en marché qui travaille pour vous</h4><p data-i18n="why2_p">Photos, diffusion et suivi des acheteurs sérieux — sans que vous ayez à tout gérer seul.</p></div>
           </li>
           <li>
             <div class="ico">&#9993;</div>
@@ -441,28 +445,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
-<section class="pad">
+<section class="pad props">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow2" data-i18n="props_eyebrow">Un aperçu du marché</div>
-      <h2 data-i18n="props_h2">Propriétés vedettes en Outaouais</h2>
-      <p data-i18n="props_lead">Un échantillon des propriétés actuellement suivies par Martin. Inscrivez-vous pour recevoir celles qui vous ressemblent.</p>
+      <div class="eyebrow2" data-i18n="props_eyebrow">Ce que vous obtenez</div>
+      <h2 data-i18n="props_h2">Une vente préparée pour maximiser votre résultat</h2>
+      <p data-i18n="props_lead">Pas de promesse magique — une méthode claire pour positionner, présenter et négocier votre propriété.</p>
     </div>
-    <div class="props">
-      <div class="prop">
-        <div class="ph"><img src="https://www.equipesiroissimard.com/wp-content/uploads/prosomo_centris/photos/20135451/1_t.jpg" alt="Pontiac"></div>
-        <div class="body"><div class="price">599 900 $</div><div class="addr">107, Ch. des Bouleaux, Pontiac</div><div class="meta" data-i18n="prop1_meta">5 chambres · secteur nature</div></div>
+    <div class="steps">
+      <div class="step">
+        <div class="n">$</div>
+        <h3 data-i18n="prop1_meta">Prix juste dès le départ</h3>
+        <p data-i18n="prop1_p">Éviter de sous-évaluer ou de surévaluer pour ne pas laisser de l'argent sur la table ni faire fuir les acheteurs.</p>
       </div>
-      <div class="prop">
-        <div class="ph"><img src="https://www.equipesiroissimard.com/wp-content/uploads/prosomo_centris/photos/18622150/1_t.jpg" alt="Gatineau"></div>
-        <div class="body"><div class="price">444 900 $</div><div class="addr">307, Rue Davidson O., Gatineau</div><div class="meta" data-i18n="prop2_meta">3 chambres · 2 salles de bain</div></div>
+      <div class="step">
+        <div class="n">★</div>
+        <h3 data-i18n="prop2_meta">Présentation soignée</h3>
+        <p data-i18n="prop2_p">Mise en valeur de votre propriété pour attirer plus d'intérêt dès les premières journées sur le marché.</p>
       </div>
-      <div class="prop">
-        <div class="ph"><img src="https://www.equipesiroissimard.com/wp-content/uploads/prosomo_centris/photos/16775400/1_t.jpg" alt="Notre-Dame-de-la-Salette"></div>
-        <div class="body"><div class="price">332 600 $</div><div class="addr">84, Ch. de la Rivière, N.-D.-de-la-Salette</div><div class="meta" data-i18n="prop3_meta">3 chambres · bord de rivière</div></div>
+      <div class="step">
+        <div class="n">✓</div>
+        <h3 data-i18n="prop3_meta">Négociation ferme</h3>
+        <p data-i18n="prop3_p">Martin défend vos intérêts à chaque offre jusqu'à la conclusion de la transaction.</p>
       </div>
     </div>
-    <div class="props-cta"><a href="#formulaire" class="btn" data-i18n="props_cta">Recevoir des propriétés comme celles-ci</a></div>
+    <div class="props-cta"><a href="#formulaire" class="btn" data-i18n="props_cta">Demander mon estimation</a></div>
   </div>
 </section>
 
@@ -471,7 +478,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="sec-head">
       <div class="eyebrow2" data-i18n="testi_eyebrow">Ils ont fait équipe avec Martin</div>
       <h2 data-i18n="testi_h2">Ce que disent ses clients</h2>
-      <p data-i18n="testi_lead">Des clients accompagnés de la première rencontre jusqu'à la conclusion de la transaction.</p>
+      <p data-i18n="testi_lead">Des propriétaires accompagnés de l'estimation jusqu'à la conclusion de la vente.</p>
     </div>
     <div class="testi-grid">
       <div class="testi-card">
@@ -481,18 +488,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div class="testi-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote data-i18n="t2">« Martin a pris le temps de comprendre ce qu'on cherchait vraiment. Il nous a présenté des propriétés qui correspondaient, sans nous faire courir partout. »</blockquote>
-        <div class="who" data-i18n="t2_who">Client · Gatineau</div>
+        <blockquote data-i18n="t2">« Martin a su positionner notre maison au bon prix. On a eu des visites sérieuses rapidement et une vente sans stress. »</blockquote>
+        <div class="who" data-i18n="t2_who">Vendeur · Gatineau</div>
       </div>
       <div class="testi-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote data-i18n="t3">« Premier achat, beaucoup de questions. Martin a été patient, clair et disponible à chaque étape. On s'est sentis en confiance du début à la fin. »</blockquote>
-        <div class="who" data-i18n="t3_who">Client · Aylmer</div>
+        <blockquote data-i18n="t3">« Première vente pour nous. Martin a été patient, clair et disponible à chaque étape. On s'est sentis en confiance du début à la fin. »</blockquote>
+        <div class="who" data-i18n="t3_who">Vendeur · Aylmer</div>
       </div>
       <div class="testi-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <blockquote data-i18n="t4">« Sa connaissance de l'Outaouais fait toute la différence. Il nous a orientés vers le bon secteur selon notre budget et notre style de vie. »</blockquote>
-        <div class="who" data-i18n="t4_who">Client · Val-des-Monts</div>
+        <blockquote data-i18n="t4">« Sa connaissance de l'Outaouais fait toute la différence. Il a su expliquer le marché de notre secteur et fixer un prix réaliste. »</blockquote>
+        <div class="who" data-i18n="t4_who">Vendeur · Val-des-Monts</div>
       </div>
       <div class="testi-card">
         <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
@@ -511,9 +518,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <section class="pad final">
   <div class="wrap">
-    <h2 data-i18n="final_h2">Prêt à trouver votre prochaine propriété&nbsp;?</h2>
-    <p data-i18n="final_p">Partagez vos critères en quelques minutes. Martin vous revient rapidement avec des propriétés qui vous conviennent, sans engagement.</p>
-    <a href="#formulaire" class="btn btn-white" data-i18n="final_cta">Commencer ma recherche</a>
+    <h2 data-i18n="final_h2">Prêt à connaître la valeur de votre propriété&nbsp;?</h2>
+    <p data-i18n="final_p">Demandez votre estimation en quelques minutes. Martin vous revient rapidement avec une lecture claire du marché, sans engagement.</p>
+    <a href="#formulaire" class="btn btn-white" data-i18n="final_cta">Obtenir mon estimation</a>
     <span class="tel-alt" data-i18n-html="final_tel">Ou appelez Martin directement : <strong>819&nbsp;665-1515</strong></span>
   </div>
 </section>
@@ -534,9 +541,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
       <div>
         <h5 data-i18n="foot_links">Liens</h5>
-        <a href="https://www.equipesiroissimard.com/acheter/" data-i18n="foot_buy">Acheter</a>
-        <a href="vendre.html" data-i18n="foot_sell">Vendre</a>
-        <a href="https://www.equipesiroissimard.com/proprietes/" data-i18n="foot_props">Toutes les propriétés</a>
+        <a href="index.html" data-i18n="foot_buy">Acheter</a>
+        <a href="https://www.equipesiroissimard.com/vendre/" data-i18n="foot_props">Vendre — site équipe</a>
         <a href="https://www.equipesiroissimard.com/equipe/martin-simard/" data-i18n="foot_profile">Profil de Martin</a>
         <a href="https://www.equipesiroissimard.com/contact/">Contact</a>
       </div>
@@ -551,23 +557,31 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
   const I18N = {
     fr: {
-      meta_title: "Trouvez votre prochaine propriété à Gatineau | Martin Simard, courtier immobilier",
-      meta_desc: "Martin Simard, #1 en Outaouais chez Royal LePage, vous aide à acheter la propriété qui vous convient. Recevez les propriétés qui correspondent à vos critères avant tout le monde.",
+      meta_title: "Vendre votre propriété à Gatineau | Martin Simard, courtier immobilier",
+      meta_desc: "Martin Simard, #1 en Outaouais chez Royal LePage, vous aide à vendre au meilleur prix. Estimation gratuite et stratégie de mise en marché, sans engagement.",
       topbar_left: "Courtier immobilier agréé · Gatineau & Outaouais · Service bilingue",
       nav_cta: "Parler à Martin",
       hero_eyebrow: "#1 en Outaouais chez Royal LePage",
-      hero_h1: 'Trouvez la propriété <span class="hl">qui vous ressemble</span> à Gatineau et en Outaouais.',
-      hero_lead: "Recevez les propriétés qui correspondent exactement à vos critères, souvent avant qu'elles apparaissent sur les portails publics. Accompagnement complet, du premier coup d'œil à la remise des clés.",
-      hero_p1: "Une sélection ciblée selon votre budget et vos besoins",
-      hero_p2: "Un courtier natif de l'Outaouais qui connaît chaque secteur",
-      hero_p3: "Service en français et en anglais, sans engagement",
-      hero_trust: "Plus de 25 ans à accompagner les acheteurs de la région.",
-      form_title: "Recevez vos propriétés ciblées",
-      form_sub: "Dites-moi ce que vous cherchez. Martin vous revient rapidement, sans engagement.",
+      hero_h1: 'Vendez votre propriété <span class="hl">au bon prix</span> à Gatineau et en Outaouais.',
+      hero_lead: "Obtenez une estimation claire et une stratégie de mise en marché adaptée à votre secteur. Martin vous accompagne de l'évaluation jusqu'à la signature chez le notaire.",
+      hero_p1: "Estimation basée sur les ventes comparables de votre secteur",
+      hero_p2: "Mise en marché pro : photos, diffusion et négociation",
+      hero_p3: "Service bilingue, sans engagement pour démarrer",
+      hero_trust: "Plus de 25 ans à accompagner les vendeurs de la région.",
+      form_title: "Obtenez votre estimation gratuite",
+      form_sub: "Parlez-nous de votre propriété. Martin vous revient rapidement avec une évaluation claire, sans engagement.",
       label_name: "Nom complet",
       label_phone: "Téléphone",
       label_email: "Courriel",
-      label_area: "Secteur recherché",
+      label_area: "Secteur",
+      label_address: "Adresse de la propriété",
+      label_timeline: "Quand souhaitez-vous vendre ?",
+      ph_address: "N°, rue, ville",
+      opt_t1: "Dès que possible",
+      opt_t2: "Dans 1 à 3 mois",
+      opt_t3: "Dans 3 à 6 mois",
+      opt_t4: "Dans 6 mois ou plus",
+      opt_t5: "Je veux seulement une estimation",
       label_budget: "Budget approximatif",
       ph_name: "Prénom et nom",
       ph_email: "vous@courriel.com",
@@ -578,11 +592,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       opt_b3: "450 000 $ – 600 000 $",
       opt_b4: "600 000 $ – 800 000 $",
       opt_b5: "Plus de 800 000 $",
-      form_cta: "Recevoir mes propriétés",
+      form_cta: "Obtenir mon estimation",
       form_sending: "Envoi en cours…",
       form_error: "Veuillez remplir tous les champs obligatoires.",
       form_error_net: "Une erreur est survenue. Appelez-nous au 819 665-1515.",
-      form_success: "Merci ! Martin vous contactera rapidement avec des propriétés ciblées.",
+      form_success: "Merci ! Martin vous contactera rapidement pour votre estimation.",
       form_trust: "Vos informations restent confidentielles · Aucun engagement",
       martin_alt: "Martin Simard, courtier immobilier agréé",
       martin_role: "Courtier immobilier agréé",
@@ -597,20 +611,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       stat4: "membre à vie du Club national",
       martin_cta: "Faire équipe avec Martin",
       steps_eyebrow: "Simple et sans pression",
-      steps_h2: "Trois étapes pour trouver votre propriété",
-      steps_lead: "Un processus clair, mené par un courtier qui fait équipe avec vous du début à la fin.",
-      step1_h: "Vous partagez vos critères",
-      step1_p: "Secteur, budget, type de propriété, besoins particuliers. Quelques minutes suffisent pour cerner ce qui compte pour vous.",
-      step2_h: "Martin cible pour vous",
-      step2_p: "Il recherche activement votre nouvelle maison et vous présente des propriétés qui correspondent réellement, sans vous faire perdre de temps.",
-      step3_h: "Vous visitez et achetez",
-      step3_p: "Négociation, inspection, paperasse légale : Martin vous accompagne à chaque étape jusqu'à la remise des clés.",
-      why_h2: 'Pourquoi acheter avec <span class="hl">Martin Simard</span>',
-      why_intro: "Natif de l'Outaouais, Martin connaît la région de fond en comble. Il traite chaque client comme il aimerait l'être : avec respect, écoute et transparence, avant, pendant et après la transaction.",
-      why1_h: "Une connaissance réelle du terrain",
-      why1_p: "Formé en architecture, courtier depuis 1997, il évalue une propriété au-delà de la fiche descriptive.",
-      why2_h: "Un accompagnement proactif",
-      why2_p: "Il fait la recherche à votre place et vous tient informé de chaque développement de votre dossier.",
+      steps_h2: "Trois étapes pour vendre avec confiance",
+      steps_lead: "Un processus clair, mené par un courtier qui fait équipe avec vous du premier appel jusqu'à la vente.",
+      step1_h: "Vous demandez votre estimation",
+      step1_p: "Adresse, secteur et échéancier. Quelques minutes suffisent pour lancer une évaluation réaliste de votre propriété.",
+      step2_h: "Martin prépare la stratégie",
+      step2_p: "Prix recommandé, plan de mise en marché et préparation de la propriété pour attirer les bons acheteurs.",
+      step3_h: "Vous vendez au bon prix",
+      step3_p: "Diffusion, visites, négociation et suivi jusqu'à la signature chez le notaire — Martin gère chaque étape.",
+      why_h2: 'Pourquoi vendre avec <span class="hl">Martin Simard</span>',
+      why_intro: "Natif de l'Outaouais, Martin connaît la valeur réelle des secteurs. Il traite chaque vendeur comme il aimerait l'être : avec respect, écoute et transparence, avant, pendant et après la vente.",
+      why1_h: "Une évaluation ancrée dans le marché",
+      why1_p: "Formé en architecture, courtier depuis 1997, il positionne votre prix selon les ventes réelles de votre secteur.",
+      why2_h: "Une mise en marché qui travaille pour vous",
+      why2_p: "Photos, diffusion et suivi des acheteurs sérieux — sans que vous ayez à tout gérer seul.",
       why3_h: "Toujours disponible",
       why3_p: "Par téléphone, courriel ou texto, le suivi se fait rapidement, en français comme en anglais.",
       badge1_h: "#1 en Outaouais",
@@ -621,60 +635,70 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       badge3_p: "Membre à vie · premier 1 % au Québec",
       badge4_h: "Service bilingue",
       badge4_p: "Accompagnement complet en FR et EN",
-      props_eyebrow: "Un aperçu du marché",
-      props_h2: "Propriétés vedettes en Outaouais",
-      props_lead: "Un échantillon des propriétés actuellement suivies par Martin. Inscrivez-vous pour recevoir celles qui vous ressemblent.",
-      prop1_meta: "5 chambres · secteur nature",
-      prop2_meta: "3 chambres · 2 salles de bain",
-      prop3_meta: "3 chambres · bord de rivière",
-      props_cta: "Recevoir des propriétés comme celles-ci",
+      props_eyebrow: "Ce que vous obtenez",
+      props_h2: "Une vente préparée pour maximiser votre résultat",
+      props_lead: "Pas de promesse magique — une méthode claire pour positionner, présenter et négocier votre propriété.",
+      prop1_meta: "Prix juste dès le départ",
+      prop1_p: "Éviter de sous-évaluer ou de surévaluer pour ne pas laisser de l'argent sur la table ni faire fuir les acheteurs.",
+      prop2_meta: "Présentation soignée",
+      prop2_p: "Mise en valeur de votre propriété pour attirer plus d'intérêt dès les premières journées sur le marché.",
+      prop3_meta: "Négociation ferme",
+      prop3_p: "Martin défend vos intérêts à chaque offre jusqu'à la conclusion de la transaction.",
+      props_cta: "Demander mon estimation",
       testi_eyebrow: "Ils ont fait équipe avec Martin",
       testi_h2: "Ce que disent ses clients",
-      testi_lead: "Des clients accompagnés de la première rencontre jusqu'à la conclusion de la transaction.",
+      testi_lead: "Des propriétaires accompagnés de l'estimation jusqu'à la conclusion de la vente.",
       t1: "« J'ai bien été prise en main, bien conseillée, bien accompagnée avec beaucoup de respect et d'authenticité dans tous les suivis. Je recommande chaudement l'équipe Sirois-Simard. »",
-      t2: "« Martin a pris le temps de comprendre ce qu'on cherchait vraiment. Il nous a présenté des propriétés qui correspondaient, sans nous faire courir partout. »",
-      t2_who: "Client · Gatineau",
-      t3: "« Premier achat, beaucoup de questions. Martin a été patient, clair et disponible à chaque étape. On s'est sentis en confiance du début à la fin. »",
-      t3_who: "Client · Aylmer",
-      t4: "« Sa connaissance de l'Outaouais fait toute la différence. Il nous a orientés vers le bon secteur selon notre budget et notre style de vie. »",
-      t4_who: "Client · Val-des-Monts",
+      t2: "« Martin a su positionner notre maison au bon prix. On a eu des visites sérieuses rapidement et une vente sans stress. »",
+      t2_who: "Vendeur · Gatineau",
+      t3: "« Première vente pour nous. Martin a été patient, clair et disponible à chaque étape. On s'est sentis en confiance du début à la fin. »",
+      t3_who: "Vendeur · Aylmer",
+      t4: "« Sa connaissance de l'Outaouais fait toute la différence. Il a su expliquer le marché de notre secteur et fixer un prix réaliste. »",
+      t4_who: "Vendeur · Val-des-Monts",
       t5: "« Service impeccable en anglais comme en français. Négociation menée avec doigté, on a obtenu la propriété au bon prix. »",
       t5_who: "Client · Hull",
       t6: "« Toujours joignable, par texto comme par téléphone. Les suivis étaient rapides et on n'a jamais eu à courir après l'information. »",
       t6_who: "Client · Buckingham",
       testi_cta: "Voir plus de témoignages",
-      final_h2: "Prêt à trouver votre prochaine propriété ?",
-      final_p: "Partagez vos critères en quelques minutes. Martin vous revient rapidement avec des propriétés qui vous conviennent, sans engagement.",
-      final_cta: "Commencer ma recherche",
+      final_h2: "Prêt à connaître la valeur de votre propriété ?",
+      final_p: "Demandez votre estimation en quelques minutes. Martin vous revient rapidement avec une lecture claire du marché, sans engagement.",
+      final_cta: "Obtenir mon estimation",
       final_tel: 'Ou appelez Martin directement : <strong>819&nbsp;665-1515</strong>',
       foot_about: "Martin Simard, courtier immobilier agréé<br>Équipe Sirois Simard · Royal LePage",
       foot_contact: "Me joindre",
       foot_team: "Équipe : 819 246-1000",
       foot_links: "Liens",
-      foot_buy: "Acheter",
-      foot_sell: "Vendre",
-      foot_props: "Toutes les propriétés",
+      foot_buy: "Page acheteurs",
+      foot_props: "Vendre — site équipe",
       foot_profile: "Profil de Martin",
       foot_legal: "© Équipe Sirois Simard, Courtiers immobiliers agréés · Royal LePage. Cette page est un outil de mise en relation. Aucun engagement n'est pris tant qu'un mandat n'est pas signé."
     },
     en: {
-      meta_title: "Find your next property in Gatineau | Martin Simard, real estate broker",
-      meta_desc: "Martin Simard, #1 in the Outaouais at Royal LePage, helps you buy the right property. Get listings that match your criteria before everyone else.",
+      meta_title: "Sell your property in Gatineau | Martin Simard, real estate broker",
+      meta_desc: "Martin Simard, #1 in the Outaouais at Royal LePage, helps you sell at the right price. Free estimate and go-to-market strategy, no obligation.",
       topbar_left: "Licensed real estate broker · Gatineau & Outaouais · Bilingual service",
       nav_cta: "Talk to Martin",
       hero_eyebrow: "#1 in the Outaouais at Royal LePage",
-      hero_h1: 'Find the property <span class="hl">that fits you</span> in Gatineau and the Outaouais.',
-      hero_lead: "Get listings that match your criteria exactly—often before they appear on public portals. Full support from the first viewing to the keys.",
-      hero_p1: "A targeted selection based on your budget and needs",
-      hero_p2: "A broker raised in the Outaouais who knows every area",
-      hero_p3: "Service in French and English, no obligation",
-      hero_trust: "Over 25 years helping buyers across the region.",
-      form_title: "Get your matched listings",
-      form_sub: "Tell me what you're looking for. Martin will get back to you quickly, no obligation.",
+      hero_h1: 'Sell your property <span class="hl">at the right price</span> in Gatineau and the Outaouais.',
+      hero_lead: "Get a clear estimate and a go-to-market strategy tailored to your area. Martin supports you from valuation through notarization.",
+      hero_p1: "Estimate based on recent comparable sales in your area",
+      hero_p2: "Pro marketing: photos, exposure, and negotiation",
+      hero_p3: "Bilingual service, no obligation to get started",
+      hero_trust: "Over 25 years helping sellers across the region.",
+      form_title: "Get your free estimate",
+      form_sub: "Tell us about your property. Martin will get back quickly with a clear valuation, no obligation.",
       label_name: "Full name",
       label_phone: "Phone",
       label_email: "Email",
-      label_area: "Preferred area",
+      label_area: "Area",
+      label_address: "Property address",
+      label_timeline: "When do you want to sell?",
+      ph_address: "Street number, street, city",
+      opt_t1: "As soon as possible",
+      opt_t2: "In 1 to 3 months",
+      opt_t3: "In 3 to 6 months",
+      opt_t4: "In 6 months or more",
+      opt_t5: "I only want an estimate",
       label_budget: "Approximate budget",
       ph_name: "First and last name",
       ph_email: "you@email.com",
@@ -685,11 +709,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       opt_b3: "$450,000 – $600,000",
       opt_b4: "$600,000 – $800,000",
       opt_b5: "Over $800,000",
-      form_cta: "Get my listings",
+      form_cta: "Get my estimate",
       form_sending: "Sending…",
       form_error: "Please fill in all required fields.",
       form_error_net: "Something went wrong. Call us at 819 665-1515.",
-      form_success: "Thank you! Martin will contact you shortly with matched listings.",
+      form_success: "Thank you! Martin will contact you shortly about your estimate.",
       form_trust: "Your information stays private · No obligation",
       martin_alt: "Martin Simard, licensed real estate broker",
       martin_role: "Licensed real estate broker",
@@ -704,20 +728,20 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       stat4: "lifetime National Club member",
       martin_cta: "Partner with Martin",
       steps_eyebrow: "Simple and pressure-free",
-      steps_h2: "Three steps to find your property",
-      steps_lead: "A clear process led by a broker who partners with you from start to finish.",
-      step1_h: "You share your criteria",
-      step1_p: "Area, budget, property type, must-haves. A few minutes is enough to clarify what matters to you.",
-      step2_h: "Martin targets for you",
-      step2_p: "He actively searches for your next home and presents properties that truly fit—without wasting your time.",
-      step3_h: "You visit and buy",
-      step3_p: "Negotiation, inspection, legal paperwork: Martin supports you every step until you get the keys.",
-      why_h2: 'Why buy with <span class="hl">Martin Simard</span>',
-      why_intro: "Born in the Outaouais, Martin knows the region thoroughly. He treats every client the way he'd want to be treated: with respect, listening, and transparency—before, during, and after the sale.",
-      why1_h: "Real local expertise",
-      why1_p: "Trained in architecture and a broker since 1997, he evaluates a property beyond the listing sheet.",
-      why2_h: "Proactive support",
-      why2_p: "He does the search for you and keeps you informed of every development on your file.",
+      steps_h2: "Three steps to sell with confidence",
+      steps_lead: "A clear process led by a broker who partners with you from the first call to the sale.",
+      step1_h: "You request your estimate",
+      step1_p: "Address, area, and timeline. A few minutes is enough to start a realistic valuation.",
+      step2_h: "Martin builds the strategy",
+      step2_p: "Recommended price, marketing plan, and property prep to attract serious buyers.",
+      step3_h: "You sell at the right price",
+      step3_p: "Exposure, showings, negotiation, and follow-through to notarization—Martin handles each step.",
+      why_h2: 'Why sell with <span class="hl">Martin Simard</span>',
+      why_intro: "Born in the Outaouais, Martin knows real local values. He treats every seller the way he'd want to be treated: with respect, listening, and transparency—before, during, and after the sale.",
+      why1_h: "A market-based valuation",
+      why1_p: "Trained in architecture and a broker since 1997, he prices your home using real sales in your area.",
+      why2_h: "Marketing that works for you",
+      why2_p: "Photos, exposure, and follow-up with serious buyers—so you don't have to manage it alone.",
       why3_h: "Always available",
       why3_p: "By phone, email, or text—follow-up is fast, in French and English.",
       badge1_h: "#1 in the Outaouais",
@@ -728,39 +752,41 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       badge3_p: "Lifetime member · top 1% in Quebec",
       badge4_h: "Bilingual service",
       badge4_p: "Full support in French and English",
-      props_eyebrow: "A market snapshot",
-      props_h2: "Featured properties in the Outaouais",
-      props_lead: "A sample of listings currently followed by Martin. Sign up to receive ones that match you.",
-      prop1_meta: "5 bedrooms · nature area",
-      prop2_meta: "3 bedrooms · 2 bathrooms",
-      prop3_meta: "3 bedrooms · riverside",
-      props_cta: "Get listings like these",
+      props_eyebrow: "What you get",
+      props_h2: "A sale prepared to maximize your result",
+      props_lead: "No magic promises—a clear method to price, present, and negotiate your property.",
+      prop1_meta: "The right price from day one",
+      prop1_p: "Avoid underpricing or overpricing so you don't leave money on the table or scare buyers away.",
+      prop2_meta: "Strong presentation",
+      prop2_p: "Showcase your property to attract more interest in the first days on market.",
+      prop3_meta: "Firm negotiation",
+      prop3_p: "Martin protects your interests on every offer through closing.",
+      props_cta: "Request my estimate",
       testi_eyebrow: "They partnered with Martin",
       testi_h2: "What his clients say",
-      testi_lead: "Clients supported from the first meeting through closing.",
+      testi_lead: "Homeowners supported from the estimate through closing.",
       t1: '"I was well taken care of, well advised, and well supported with a lot of respect and authenticity in every follow-up. I warmly recommend the Sirois-Simard team."',
-      t2: '"Martin took the time to understand what we were really looking for. He showed us properties that fit—without running us all over town."',
-      t2_who: "Client · Gatineau",
-      t3: '"First purchase, lots of questions. Martin was patient, clear, and available at every step. We felt confident from start to finish."',
-      t3_who: "Client · Aylmer",
-      t4: '"His knowledge of the Outaouais makes all the difference. He guided us to the right area for our budget and lifestyle."',
-      t4_who: "Client · Val-des-Monts",
+      t2: '"Martin priced our home correctly. We got serious showings quickly and a stress-free sale."',
+      t2_who: "Seller · Gatineau",
+      t3: '"First time selling. Martin was patient, clear, and available at every step. We felt confident from start to finish."',
+      t3_who: "Seller · Aylmer",
+      t4: '"His knowledge of the Outaouais makes all the difference. He explained our local market and set a realistic price."',
+      t4_who: "Seller · Val-des-Monts",
       t5: '"Impeccable service in English and French. Negotiation handled with care—we got the property at the right price."',
       t5_who: "Client · Hull",
       t6: '"Always reachable by text or phone. Follow-ups were fast and we never had to chase information."',
       t6_who: "Client · Buckingham",
       testi_cta: "See more testimonials",
-      final_h2: "Ready to find your next property?",
-      final_p: "Share your criteria in a few minutes. Martin will get back quickly with listings that fit—no obligation.",
-      final_cta: "Start my search",
+      final_h2: "Ready to know your property's value?",
+      final_p: "Request your estimate in a few minutes. Martin will get back quickly with a clear market read—no obligation.",
+      final_cta: "Get my estimate",
       final_tel: 'Or call Martin directly: <strong>819&nbsp;665-1515</strong>',
       foot_about: "Martin Simard, licensed real estate broker<br>Équipe Sirois Simard · Royal LePage",
       foot_contact: "Contact me",
       foot_team: "Team: 819 246-1000",
       foot_links: "Links",
-      foot_buy: "Buy",
-      foot_sell: "Sell",
-      foot_props: "All properties",
+      foot_buy: "Buyer page",
+      foot_props: "Sell — team site",
       foot_profile: "Martin's profile",
       foot_legal: "© Équipe Sirois Simard, Licensed real estate brokers · Royal LePage. This page is a lead connection tool. No obligation until a mandate is signed."
     }
@@ -830,8 +856,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     if (el && value) el.value = value;
   });
 
-  const form = document.getElementById("lead-form-buyer");
-  const submitBtn = document.getElementById("cta-submit-buyer");
+  const form = document.getElementById("lead-form-seller");
+  const submitBtn = document.getElementById("cta-submit-seller");
   const errorEl = document.getElementById("form-error");
   const successEl = document.getElementById("form-success");
   if (!form) return;
@@ -865,13 +891,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         });
         if (!res.ok) throw new Error("Webhook error");
       } else {
-        console.info("[Lead Achat]", data);
+        console.info("[Lead Vente]", data);
         await new Promise((r) => setTimeout(r, 500));
       }
 
       // Redirect to thank-you page (pixels fire there)
       const thanks = new URL("merci.html", window.location.href);
       thanks.searchParams.set("lang", lang);
+      thanks.searchParams.set("type", "vente");
       window.location.href = thanks.toString();
       return;
     } catch (err) {
