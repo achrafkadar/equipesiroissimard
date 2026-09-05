@@ -1,0 +1,302 @@
+[
+  {
+    "n": 1,
+    "titre": "Le prix de votre voisin n'est pas le vôtre",
+    "theme": "estimation",
+    "photo_id": "10172994",
+    "inscription": "251 rue de la Côte-des-Neiges, Gatineau",
+    "fichier": "01-le-prix-de-votre-voisin-n-est-pas-le-votre.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/01-le-prix-de-votre-voisin-n-est-pas-le-votre.jpg",
+    "ko": 245
+  },
+  {
+    "n": 2,
+    "titre": "Un mauvais prix coûte plus cher qu'un courtier",
+    "theme": "vendeur",
+    "photo_id": "25148074",
+    "inscription": "48 rue Gabriel-Lacasse, Hull",
+    "fichier": "02-un-mauvais-prix-coute-plus-cher-qu-un-courtier.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/02-un-mauvais-prix-coute-plus-cher-qu-un-courtier.jpg",
+    "ko": 301
+  },
+  {
+    "n": 3,
+    "titre": "Vous habitez Ottawa. Votre maison est peut-être à Gatineau",
+    "theme": "acheteur",
+    "photo_id": "14018539",
+    "inscription": "432 rue P-Labine, Gatineau",
+    "fichier": "03-vous-habitez-ottawa-votre-maison-est-peut-etre-a-gat.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/03-vous-habitez-ottawa-votre-maison-est-peut-etre-a-gat.jpg",
+    "ko": 197
+  },
+  {
+    "n": 4,
+    "titre": "Trois transactions. Vingt ans. La même équipe",
+    "theme": "preuve",
+    "photo_id": "23696022",
+    "inscription": "295 ch. du Fer-à-Cheval, Masson-Angers",
+    "fichier": "04-trois-transactions-vingt-ans-la-meme-equipe.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/04-trois-transactions-vingt-ans-la-meme-equipe.jpg",
+    "ko": 220
+  },
+  {
+    "n": 5,
+    "titre": "Trois gestes. Le reste, c'est du bruit",
+    "theme": "tip",
+    "photo_id": "12251651",
+    "inscription": "8 rue Marcotte, Gatineau",
+    "fichier": "05-trois-gestes-le-reste-c-est-du-bruit.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/05-trois-gestes-le-reste-c-est-du-bruit.jpg",
+    "ko": 233
+  },
+  {
+    "n": 6,
+    "titre": "Succession : le dossier qu'on rate en accélérant",
+    "theme": "estimation",
+    "photo_id": "12592809",
+    "inscription": "382 ch. du Lac Long, Blue Sea",
+    "fichier": "06-succession-le-dossier-qu-on-rate-en-accelerant.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/06-succession-le-dossier-qu-on-rate-en-accelerant.jpg",
+    "ko": 238
+  },
+  {
+    "n": 7,
+    "titre": "Hull, Aylmer, Gatineau : trois marchés. Un budget",
+    "theme": "acheteur",
+    "photo_id": "10172994",
+    "inscription": "251 rue de la Côte-des-Neiges, Gatineau",
+    "fichier": "07-hull-aylmer-gatineau-trois-marches-un-budget.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/07-hull-aylmer-gatineau-trois-marches-un-budget.jpg",
+    "ko": 241
+  },
+  {
+    "n": 8,
+    "titre": "Mettre en ligne, ce n'est pas vendre",
+    "theme": "vendeur",
+    "photo_id": "18899040",
+    "inscription": "112 ch. Jos-Montferrand, L'Ange-Gardien",
+    "fichier": "08-mettre-en-ligne-ce-n-est-pas-vendre.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/08-mettre-en-ligne-ce-n-est-pas-vendre.jpg",
+    "ko": 267
+  },
+  {
+    "n": 9,
+    "titre": "Avant l'hiver : les vendeurs motivés restent",
+    "theme": "acheteur",
+    "photo_id": "17961377",
+    "inscription": "6 ch. de la Mer Bleue, Messines",
+    "fichier": "09-avant-l-hiver-les-vendeurs-motives-restent.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/09-avant-l-hiver-les-vendeurs-motives-restent.jpg",
+    "ko": 321
+  },
+  {
+    "n": 10,
+    "titre": "#1 en Outaouais. Ça ne vend pas une maison tout seul",
+    "theme": "preuve",
+    "photo_id": "11590503",
+    "inscription": "45 ch. Harry-McClelland, La Pêche",
+    "fichier": "10-1-en-outaouais-ca-ne-vend-pas-une-maison-tout-seul.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/10-1-en-outaouais-ca-ne-vend-pas-une-maison-tout-seul.jpg",
+    "ko": 301
+  },
+  {
+    "n": 11,
+    "titre": "Chelsea et Cantley : plus d'espace, moins de fiches",
+    "theme": "acheteur",
+    "photo_id": "10977820",
+    "inscription": "52 ch. Hilaire, Blue Sea",
+    "fichier": "11-chelsea-et-cantley-plus-d-espace-moins-de-fiches.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/11-chelsea-et-cantley-plus-d-espace-moins-de-fiches.jpg",
+    "ko": 325
+  },
+  {
+    "n": 12,
+    "titre": "Encore sur le marché? Ce n'est (presque) jamais « le marché »",
+    "theme": "vendeur",
+    "photo_id": "12251651",
+    "inscription": "8 rue Marcotte, Gatineau",
+    "fichier": "12-encore-sur-le-marche-ce-n-est-presque-jamais-le-marc.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/12-encore-sur-le-marche-ce-n-est-presque-jamais-le-marc.jpg",
+    "ko": 234
+  },
+  {
+    "n": 13,
+    "titre": "Ce que les photos ne montrent jamais",
+    "theme": "tip",
+    "photo_id": "12888570",
+    "inscription": "240 boul. Maisonneuve apt 203, Hull",
+    "fichier": "13-ce-que-les-photos-ne-montrent-jamais.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/13-ce-que-les-photos-ne-montrent-jamais.jpg",
+    "ko": 206
+  },
+  {
+    "n": 14,
+    "titre": "Décembre : moins d'affiches, acheteurs plus motivés",
+    "theme": "saison",
+    "photo_id": "23696022",
+    "inscription": "295 ch. du Fer-à-Cheval, Masson-Angers",
+    "fichier": "14-decembre-moins-d-affiches-acheteurs-plus-motives.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/14-decembre-moins-d-affiches-acheteurs-plus-motives.jpg",
+    "ko": 220
+  },
+  {
+    "n": 15,
+    "titre": "Les bonnes fiches partent avant l'infolettre du dimanche",
+    "theme": "acheteur",
+    "photo_id": "26146347",
+    "inscription": "294 boul. Maisonneuve apt 1, Hull",
+    "fichier": "15-les-bonnes-fiches-partent-avant-l-infolettre-du-dima.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/15-les-bonnes-fiches-partent-avant-l-infolettre-du-dima.jpg",
+    "ko": 258
+  },
+  {
+    "n": 16,
+    "titre": "La première offre n'est pas un verdict",
+    "theme": "vendeur",
+    "photo_id": "14018539",
+    "inscription": "432 rue P-Labine, Gatineau",
+    "fichier": "16-la-premiere-offre-n-est-pas-un-verdict.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/16-la-premiere-offre-n-est-pas-un-verdict.jpg",
+    "ko": 194
+  },
+  {
+    "n": 17,
+    "titre": "Bilingue pour vrai — du premier texto au notaire",
+    "theme": "preuve",
+    "photo_id": "25148074",
+    "inscription": "48 rue Gabriel-Lacasse, Hull",
+    "fichier": "17-bilingue-pour-vrai-du-premier-texto-au-notaire.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/17-bilingue-pour-vrai-du-premier-texto-au-notaire.jpg",
+    "ko": 296
+  },
+  {
+    "n": 18,
+    "titre": "Une estimation en décembre vous donne 90 jours. Pas 10 en mars",
+    "theme": "estimation",
+    "photo_id": "12592809",
+    "inscription": "382 ch. du Lac Long, Blue Sea",
+    "fichier": "18-une-estimation-en-decembre-vous-donne-90-jours-pas-1.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/18-une-estimation-en-decembre-vous-donne-90-jours-pas-1.jpg",
+    "ko": 242
+  },
+  {
+    "n": 19,
+    "titre": "Les acheteurs sérieux bougent en janvier. Pas en avril",
+    "theme": "saison",
+    "photo_id": "20053747",
+    "inscription": "481 boul. St-Raymond, Hull",
+    "fichier": "19-les-acheteurs-serieux-bougent-en-janvier-pas-en-avri.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/19-les-acheteurs-serieux-bougent-en-janvier-pas-en-avri.jpg",
+    "ko": 253
+  },
+  {
+    "n": 20,
+    "titre": "Val-des-Monts et L'Ange-Gardien : autre densité, autres prix",
+    "theme": "acheteur",
+    "photo_id": "18899040",
+    "inscription": "112 ch. Jos-Montferrand, L'Ange-Gardien",
+    "fichier": "20-val-des-monts-et-l-ange-gardien-autre-densite-autres.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/20-val-des-monts-et-l-ange-gardien-autre-densite-autres.jpg",
+    "ko": 265
+  },
+  {
+    "n": 21,
+    "titre": "Avant l'offre : les papiers qui évitent le notaire-surprise",
+    "theme": "acheteur",
+    "photo_id": "21351696",
+    "inscription": "23 rue Sœur-Jeanne-Marie-Chavoin apt 415, Hull",
+    "fichier": "21-avant-l-offre-les-papiers-qui-evitent-le-notaire-sur.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/21-avant-l-offre-les-papiers-qui-evitent-le-notaire-sur.jpg",
+    "ko": 218
+  },
+  {
+    "n": 22,
+    "titre": "Condo ou maison à Gatineau : ce n'est pas le même mois",
+    "theme": "acheteur",
+    "photo_id": "26146347",
+    "inscription": "294 boul. Maisonneuve apt 1, Hull",
+    "fichier": "22-condo-ou-maison-a-gatineau-ce-n-est-pas-le-meme-mois.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/22-condo-ou-maison-a-gatineau-ce-n-est-pas-le-meme-mois.jpg",
+    "ko": 256
+  },
+  {
+    "n": 23,
+    "titre": "Joignable le soir. Pas « on vous rappelle lundi »",
+    "theme": "preuve",
+    "photo_id": "10172994",
+    "inscription": "251 rue de la Côte-des-Neiges, Gatineau",
+    "fichier": "23-joignable-le-soir-pas-on-vous-rappelle-lundi.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/23-joignable-le-soir-pas-on-vous-rappelle-lundi.jpg",
+    "ko": 240
+  },
+  {
+    "n": 24,
+    "titre": "Offre multiple à Gatineau : la plus haute n'est pas toujours la bonne",
+    "theme": "acheteur",
+    "photo_id": "25148074",
+    "inscription": "48 rue Gabriel-Lacasse, Hull",
+    "fichier": "24-offre-multiple-a-gatineau-la-plus-haute-n-est-pas-to.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/24-offre-multiple-a-gatineau-la-plus-haute-n-est-pas-to.jpg",
+    "ko": 298
+  },
+  {
+    "n": 25,
+    "titre": "Votre estimation 2025 n'est plus un prix 2027",
+    "theme": "estimation",
+    "photo_id": "12888570",
+    "inscription": "240 boul. Maisonneuve apt 203, Hull",
+    "fichier": "25-votre-estimation-2025-n-est-plus-un-prix-2027.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/25-votre-estimation-2025-n-est-plus-un-prix-2027.jpg",
+    "ko": 206
+  },
+  {
+    "n": 26,
+    "titre": "Mars : plus de choix, plus de monde sur la même adresse",
+    "theme": "acheteur",
+    "photo_id": "14018539",
+    "inscription": "432 rue P-Labine, Gatineau",
+    "fichier": "26-mars-plus-de-choix-plus-de-monde-sur-la-meme-adresse.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/26-mars-plus-de-choix-plus-de-monde-sur-la-meme-adresse.jpg",
+    "ko": 190
+  },
+  {
+    "n": 27,
+    "titre": "Un terrain en Outaouais, ce n'est pas un prix l'acre",
+    "theme": "acheteur",
+    "photo_id": "28224134",
+    "inscription": "383 ch. du Lac Long, Blue Sea",
+    "fichier": "27-un-terrain-en-outaouais-ce-n-est-pas-un-prix-l-acre.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/27-un-terrain-en-outaouais-ce-n-est-pas-un-prix-l-acre.jpg",
+    "ko": 245
+  },
+  {
+    "n": 28,
+    "titre": "Le lendemain des visites décide plus que la soirée portes ouvertes",
+    "theme": "vendeur",
+    "photo_id": "12592809",
+    "inscription": "382 ch. du Lac Long, Blue Sea",
+    "fichier": "28-le-lendemain-des-visites-decide-plus-que-la-soiree-p.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/28-le-lendemain-des-visites-decide-plus-que-la-soiree-p.jpg",
+    "ko": 241
+  },
+  {
+    "n": 29,
+    "titre": "DuProprio n'a pas marché. Ce n'est pas un échec — c'est un diagnostic",
+    "theme": "tip",
+    "photo_id": "12251651",
+    "inscription": "8 rue Marcotte, Gatineau",
+    "fichier": "29-duproprio-n-a-pas-marche-ce-n-est-pas-un-echec-c-est.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/29-duproprio-n-a-pas-marche-ce-n-est-pas-un-echec-c-est.jpg",
+    "ko": 236
+  },
+  {
+    "n": 30,
+    "titre": "Vendre cet été, acheter d'abord, ou attendre?",
+    "theme": "estimation",
+    "photo_id": "23696022",
+    "inscription": "295 ch. du Fer-à-Cheval, Masson-Angers",
+    "fichier": "30-vendre-cet-ete-acheter-d-abord-ou-attendre.jpg",
+    "url": "https://equipesiroissimard.ca/Assets/gbp/30-vendre-cet-ete-acheter-d-abord-ou-attendre.jpg",
+    "ko": 216
+  }
+]
