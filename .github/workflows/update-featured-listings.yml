@@ -1,0 +1,48 @@
+name: Update featured listings
+
+on:
+  schedule:
+    # Every Monday at 13:00 UTC (09:00 America/Toronto / 10:00 EDT)
+    - cron: "0 13 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Refresh featured property cards
+        id: update
+        run: |
+          set -euo pipefail
+          python3 scripts/update_featured_listings.py
+          if git diff --quiet -- index.html; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push
+        if: steps.update.outputs.changed == 'true'
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          git commit -m "$(cat <<'EOF'
+          Refresh featured buyer listings from Centris.
+
+          Weekly sync keeps the 3 landing-page cards on live photos and the newest team listings.
+          EOF
+          )"
+          git push
