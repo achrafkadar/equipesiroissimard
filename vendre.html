@@ -173,16 +173,28 @@
   .badges .b h4{font-size:16px;margin-bottom:1px}
   .badges .b span{font-size:13.5px;color:var(--gris)}
 
-  .props{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .prop{border:1px solid var(--bordure);border-radius:12px;overflow:hidden;background:#fff;transition:box-shadow .2s,transform .2s}
-  .prop:hover{box-shadow:var(--ombre);transform:translateY(-3px)}
-  .prop .ph{aspect-ratio:4/3;background:var(--gris-clair);overflow:hidden}
-  .prop .ph img{width:100%;height:100%;object-fit:cover}
-  .prop .body{padding:18px 20px}
-  .prop .price{font-size:20px;font-weight:800;color:var(--rouge);margin-bottom:4px}
-  .prop .addr{font-size:14.5px;color:var(--gris-fonce);font-weight:600}
-  .prop .meta{font-size:13px;color:var(--gris);margin-top:8px}
-  .props-cta{text-align:center;margin-top:40px}
+  .get{background:#fff;border-top:1px solid var(--bordure)}
+  .get-list{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:28px;
+    max-width:1100px;margin:0 auto
+  }
+  .get-item{
+    padding:0 8px 8px;border:none;background:transparent
+  }
+  .get-item .num{
+    display:inline-block;font-size:12px;font-weight:800;letter-spacing:.16em;
+    text-transform:uppercase;color:var(--rouge)!important;margin-bottom:14px
+  }
+  .get-item h3{
+    font-size:23px;line-height:1.25;margin:0 0 12px;color:var(--noir)!important;
+    font-weight:800;-webkit-text-fill-color:var(--noir)!important
+  }
+  .get-item p{
+    font-size:16px;line-height:1.65;margin:0;color:var(--gris)!important;
+    max-width:32ch;-webkit-text-fill-color:var(--gris)!important
+  }
+  .get-item + .get-item{border-left:1px solid var(--bordure);padding-left:32px}
+  .props-cta{text-align:center;margin-top:44px}
 
   .testi{background:var(--gris-clair);border-top:1px solid var(--bordure);border-bottom:1px solid var(--bordure)}
   .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -214,7 +226,9 @@
     .why .grid{grid-template-columns:1fr;gap:36px}
     .im-grid{grid-template-columns:1fr;gap:32px}
     .im-photo img{aspect-ratio:16/10}
-    .steps,.props{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .get-list{grid-template-columns:1fr;gap:28px}
+    .get-item + .get-item{border-left:none;border-top:1px solid var(--bordure);padding-left:8px;padding-top:28px}
     .testi-grid{grid-template-columns:repeat(2,1fr)}
     .topbar .hide-m{display:none}
   }
@@ -437,28 +451,28 @@
   </div>
 </section>
 
-<section class="pad props">
+<section class="pad get">
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow2" data-i18n="props_eyebrow">Ce que vous obtenez</div>
       <h2 data-i18n="props_h2">Une vente préparée pour maximiser votre résultat</h2>
       <p data-i18n="props_lead">Pas de promesse magique — une méthode claire pour positionner, présenter et négocier votre propriété.</p>
     </div>
-    <div class="steps">
-      <div class="step">
-        <div class="n">$</div>
-        <h3 data-i18n="prop1_meta">Prix juste dès le départ</h3>
-        <p data-i18n="prop1_p">Éviter de sous-évaluer ou de surévaluer pour ne pas laisser de l'argent sur la table ni faire fuir les acheteurs.</p>
+    <div class="get-list">
+      <div class="get-item">
+        <div class="num">01 — Prix</div>
+        <h3 data-i18n="get1_h">Prix juste dès le départ</h3>
+        <p data-i18n="get1_p">Éviter de sous-évaluer ou de surévaluer pour ne pas laisser de l'argent sur la table ni faire fuir les acheteurs.</p>
       </div>
-      <div class="step">
-        <div class="n">★</div>
-        <h3 data-i18n="prop2_meta">Présentation soignée</h3>
-        <p data-i18n="prop2_p">Mise en valeur de votre propriété pour attirer plus d'intérêt dès les premières journées sur le marché.</p>
+      <div class="get-item">
+        <div class="num">02 — Présentation</div>
+        <h3 data-i18n="get2_h">Présentation soignée</h3>
+        <p data-i18n="get2_p">Mise en valeur de votre propriété pour attirer plus d'intérêt dès les premières journées sur le marché.</p>
       </div>
-      <div class="step">
-        <div class="n">✓</div>
-        <h3 data-i18n="prop3_meta">Négociation ferme</h3>
-        <p data-i18n="prop3_p">Martin défend vos intérêts à chaque offre jusqu'à la conclusion de la transaction.</p>
+      <div class="get-item">
+        <div class="num">03 — Négociation</div>
+        <h3 data-i18n="get3_h">Négociation ferme</h3>
+        <p data-i18n="get3_p">Martin défend vos intérêts à chaque offre jusqu'à la conclusion de la transaction.</p>
       </div>
     </div>
     <div class="props-cta"><a href="#formulaire" class="btn" data-i18n="props_cta">Demander mon estimation</a></div>
@@ -630,12 +644,12 @@
       props_eyebrow: "Ce que vous obtenez",
       props_h2: "Une vente préparée pour maximiser votre résultat",
       props_lead: "Pas de promesse magique — une méthode claire pour positionner, présenter et négocier votre propriété.",
-      prop1_meta: "Prix juste dès le départ",
-      prop1_p: "Éviter de sous-évaluer ou de surévaluer pour ne pas laisser de l'argent sur la table ni faire fuir les acheteurs.",
-      prop2_meta: "Présentation soignée",
-      prop2_p: "Mise en valeur de votre propriété pour attirer plus d'intérêt dès les premières journées sur le marché.",
-      prop3_meta: "Négociation ferme",
-      prop3_p: "Martin défend vos intérêts à chaque offre jusqu'à la conclusion de la transaction.",
+      get1_h: "Prix juste dès le départ",
+      get1_p: "Éviter de sous-évaluer ou de surévaluer pour ne pas laisser de l'argent sur la table ni faire fuir les acheteurs.",
+      get2_h: "Présentation soignée",
+      get2_p: "Mise en valeur de votre propriété pour attirer plus d'intérêt dès les premières journées sur le marché.",
+      get3_h: "Négociation ferme",
+      get3_p: "Martin défend vos intérêts à chaque offre jusqu'à la conclusion de la transaction.",
       props_cta: "Demander mon estimation",
       testi_eyebrow: "Ils ont fait équipe avec Martin",
       testi_h2: "Ce que disent ses clients",
@@ -747,12 +761,12 @@
       props_eyebrow: "What you get",
       props_h2: "A sale prepared to maximize your result",
       props_lead: "No magic promises—a clear method to price, present, and negotiate your property.",
-      prop1_meta: "The right price from day one",
-      prop1_p: "Avoid underpricing or overpricing so you don't leave money on the table or scare buyers away.",
-      prop2_meta: "Strong presentation",
-      prop2_p: "Showcase your property to attract more interest in the first days on market.",
-      prop3_meta: "Firm negotiation",
-      prop3_p: "Martin protects your interests on every offer through closing.",
+      get1_h: "The right price from day one",
+      get1_p: "Avoid underpricing or overpricing so you don't leave money on the table or scare buyers away.",
+      get2_h: "Strong presentation",
+      get2_p: "Showcase your property to attract more interest in the first days on market.",
+      get3_h: "Firm negotiation",
+      get3_p: "Martin protects your interests on every offer through closing.",
       props_cta: "Request my estimate",
       testi_eyebrow: "They partnered with Martin",
       testi_h2: "What his clients say",
