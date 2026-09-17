@@ -9,6 +9,8 @@ node_modules/
 .vscode/
 .idea/
 *.local
+__pycache__/
+*.pyc
 
 # Originaux / doublons (on garde les noms propres)
 Assets/Bard, Michel 2021.jpg
