@@ -289,7 +289,7 @@
     <div class="hero-right" id="formulaire">
       <div class="form-card">
         <h2 data-i18n="form_title">Obtenez votre estimation gratuite</h2>
-        <p class="sub" data-i18n="form_sub">Parlez-nous de votre propriété. Martin vous revient rapidement avec une évaluation claire, sans engagement.</p>
+        <p class="sub" data-i18n="form_sub">Parlez-nous de votre propriété. Martin vous revient rapidement avec une évaluation claire — l'équipe assure un suivi rapide si besoin.</p>
         <form class="lead-form" id="lead-form-seller" novalidate>
           <div class="field">
             <label for="nom" data-i18n="label_name">Nom complet</label>
@@ -575,7 +575,7 @@
       hero_p3: "Service bilingue, sans engagement pour démarrer",
       hero_trust: "Plus de 25 ans à accompagner les vendeurs de la région.",
       form_title: "Obtenez votre estimation gratuite",
-      form_sub: "Parlez-nous de votre propriété. Martin vous revient rapidement avec une évaluation claire, sans engagement.",
+      form_sub: "Parlez-nous de votre propriété. Martin vous revient rapidement avec une évaluation claire — l'équipe assure un suivi rapide si besoin.",
       label_name: "Nom complet",
       label_phone: "Téléphone",
       label_email: "Courriel",
@@ -692,7 +692,7 @@
       hero_p3: "Bilingual service, no obligation to get started",
       hero_trust: "Over 25 years helping sellers across the region.",
       form_title: "Get your free estimate",
-      form_sub: "Tell us about your property. Martin will get back quickly with a clear valuation, no obligation.",
+      form_sub: "Tell us about your property. Martin will get back quickly with a clear valuation—the team ensures fast follow-up if needed.",
       label_name: "Full name",
       label_phone: "Phone",
       label_email: "Email",
@@ -905,7 +905,7 @@
       // Redirect to thank-you page (pixels fire there)
       const thanks = new URL("merci.html", window.location.href);
       thanks.searchParams.set("lang", lang);
-      thanks.searchParams.set("type", "vente");
+      thanks.searchParams.set("flow", "vente");
       window.location.href = thanks.toString();
       return;
     } catch (err) {
