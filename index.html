@@ -894,6 +894,7 @@
       const thanks = new URL("merci.html", window.location.href);
       thanks.searchParams.set("lang", lang);
       thanks.searchParams.set("flow", "achat");
+      thanks.searchParams.set("formSource", "landing-achat");
       window.location.href = thanks.toString();
       return;
     } catch (err) {

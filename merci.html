@@ -261,11 +261,40 @@
   });
   applyLang(lang);
 
-  if (typeof fbq === "function") fbq("track", "Lead");
-  if (typeof gtag === "function") {
-    gtag("event", "generate_lead", {
-      event_category: flow === "vente" ? "landing_vente" : "landing_achat"
-    });
+  // Pixel Meta : acheteurs = CompleteRegistration (ad set site),
+  // vendeurs = Lead. GTM lit aussi formSource dans l'URL.
+  const formSource = params.get("formSource")
+    || (flow === "vente" ? "landing-vente" : "landing-achat");
+  const metaEvent = flow === "vente" ? "Lead" : "CompleteRegistration";
+  const gaEvent = flow === "vente" ? "generate_lead" : "sign_up";
+  const pixelKey = "ms_px_" + flow + "_" + metaEvent;
+
+  window.dataLayer = window.dataLayer || [];
+  window.dataLayer.push({
+    event: flow === "vente" ? "thankyou_vente" : "thankyou_achat",
+    formSource: formSource,
+    flow: flow
+  });
+
+  function fireOnce() {
+    if (sessionStorage.getItem(pixelKey)) return true;
+    if (typeof fbq !== "function") return false;
+    sessionStorage.setItem(pixelKey, "1");
+    fbq("track", metaEvent);
+    if (typeof gtag === "function") {
+      gtag("event", gaEvent, {
+        event_category: flow === "vente" ? "landing_vente" : "landing_achat"
+      });
+    }
+    return true;
+  }
+
+  if (!fireOnce()) {
+    var tries = 0;
+    var wait = setInterval(function () {
+      tries += 1;
+      if (fireOnce() || tries > 25) clearInterval(wait);
+    }, 200);
   }
 })();
 </script>
