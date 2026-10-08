@@ -209,7 +209,8 @@
   footer .legal{padding-top:22px;font-size:12.5px;color:var(--gris);text-align:center;line-height:1.7}
 
   @media(max-width:900px){
-    .hero .wrap{grid-template-columns:1fr;gap:34px;padding:48px 24px 52px}
+    .hero .wrap{grid-template-columns:1fr;gap:28px;padding:20px 16px 44px}
+    .hero-right{order:-1}
     .hero h1{font-size:38px}
     .why .grid{grid-template-columns:1fr;gap:36px}
     .im-grid{grid-template-columns:1fr;gap:32px}
@@ -283,42 +284,29 @@
           </div>
           <div class="row2">
             <div class="field">
-              <label for="tel" data-i18n="label_phone">Téléphone</label>
-              <input type="tel" id="tel" name="tel" placeholder="819 000-0000" required autocomplete="tel">
+              <label for="courriel" data-i18n="label_email">Courriel</label>
+              <input type="email" id="courriel" name="courriel" data-i18n-placeholder="ph_email" placeholder="vous@courriel.com" required autocomplete="email" inputmode="email">
             </div>
             <div class="field">
-              <label for="courriel" data-i18n="label_email">Courriel</label>
-              <input type="email" id="courriel" name="courriel" data-i18n-placeholder="ph_email" placeholder="vous@courriel.com" required autocomplete="email">
+              <label for="tel" data-i18n="label_phone">Téléphone</label>
+              <input type="tel" id="tel" name="tel" placeholder="819 000-0000" required autocomplete="tel" inputmode="tel">
             </div>
           </div>
-          <div class="row2">
-            <div class="field">
-              <label for="secteur" data-i18n="label_area">Secteur recherché</label>
-              <select id="secteur" name="secteur" required>
-                <option value="" disabled selected data-i18n="opt_choose">Choisir</option>
-                <option value="Gatineau (Hull)">Gatineau (Hull)</option>
-                <option value="Gatineau (Aylmer)">Gatineau (Aylmer)</option>
-                <option value="Gatineau (Gatineau)">Gatineau (Gatineau)</option>
-                <option value="Gatineau (Buckingham)">Gatineau (Buckingham)</option>
-                <option value="Val-des-Monts">Val-des-Monts</option>
-                <option value="Cantley">Cantley</option>
-                <option value="Chelsea">Chelsea</option>
-                <option value="La Pêche">La Pêche</option>
-                <option value="Pontiac">Pontiac</option>
-                <option value="Autre" data-i18n="opt_other_area">Autre secteur de l'Outaouais</option>
-              </select>
-            </div>
-            <div class="field">
-              <label for="budget" data-i18n="label_budget">Budget approximatif</label>
-              <select id="budget" name="budget" required>
-                <option value="" disabled selected data-i18n="opt_choose">Choisir</option>
-                <option value="lt-300" data-i18n="opt_b1">Moins de 300 000 $</option>
-                <option value="300-450" data-i18n="opt_b2">300 000 $ – 450 000 $</option>
-                <option value="450-600" data-i18n="opt_b3">450 000 $ – 600 000 $</option>
-                <option value="600-800" data-i18n="opt_b4">600 000 $ – 800 000 $</option>
-                <option value="gt-800" data-i18n="opt_b5">Plus de 800 000 $</option>
-              </select>
-            </div>
+          <div class="field">
+            <label for="secteur" data-i18n="label_area">Secteur recherché</label>
+            <select id="secteur" name="secteur" required>
+              <option value="" disabled selected data-i18n="opt_choose">Choisir</option>
+              <option value="Gatineau (Hull)">Gatineau (Hull)</option>
+              <option value="Gatineau (Aylmer)">Gatineau (Aylmer)</option>
+              <option value="Gatineau (Gatineau)">Gatineau (Gatineau)</option>
+              <option value="Gatineau (Buckingham)">Gatineau (Buckingham)</option>
+              <option value="Val-des-Monts">Val-des-Monts</option>
+              <option value="Cantley">Cantley</option>
+              <option value="Chelsea">Chelsea</option>
+              <option value="La Pêche">La Pêche</option>
+              <option value="Pontiac">Pontiac</option>
+              <option value="Autre" data-i18n="opt_other_area">Autre secteur de l'Outaouais</option>
+            </select>
           </div>
           <input type="hidden" name="source" value="landing-achat">
           <input type="hidden" name="lang" id="form_lang" value="fr">
@@ -399,7 +387,7 @@
       <div class="step">
         <div class="n">1</div>
         <h3 data-i18n="step1_h">Vous partagez vos critères</h3>
-        <p data-i18n="step1_p">Secteur, budget, type de propriété, besoins particuliers. Quelques minutes suffisent pour cerner ce qui compte pour vous.</p>
+        <p data-i18n="step1_p">Vos coordonnées et le secteur recherché. Votre courtier précise ensuite avec vous le budget et vos besoins.</p>
       </div>
       <div class="step">
         <div class="n">2</div>
@@ -613,7 +601,7 @@
       steps_h2: "Trois étapes pour trouver votre propriété",
       steps_lead: "Un processus clair, mené par l'équipe qui fait équipe avec vous du début à la fin.",
       step1_h: "Vous partagez vos critères",
-      step1_p: "Secteur, budget, type de propriété, besoins particuliers. Quelques minutes suffisent pour cerner ce qui compte pour vous.",
+      step1_p: "Vos coordonnées et le secteur recherché. Votre courtier précise ensuite avec vous le budget et vos besoins.",
       step2_h: "L'équipe cible pour vous",
       step2_p: "Votre courtier recherche activement votre nouvelle maison et vous présente des propriétés qui correspondent réellement, sans vous faire perdre de temps.",
       step3_h: "Vous visitez et achetez",
@@ -718,7 +706,7 @@
       steps_h2: "Three steps to find your property",
       steps_lead: "A clear process led by the team that partners with you from start to finish.",
       step1_h: "You share your criteria",
-      step1_p: "Area, budget, property type, must-haves. A few minutes is enough to clarify what matters to you.",
+      step1_p: "Your contact details and preferred area. Your broker then clarifies budget and needs with you.",
       step2_h: "The team targets for you",
       step2_p: "Your broker actively searches for your next home and presents properties that truly fit—without wasting your time.",
       step3_h: "You visit and buy",
