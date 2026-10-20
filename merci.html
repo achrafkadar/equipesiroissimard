@@ -280,7 +280,9 @@
     if (sessionStorage.getItem(pixelKey)) return true;
     if (typeof fbq !== "function") return false;
     sessionStorage.setItem(pixelKey, "1");
-    fbq("track", metaEvent);
+    // Vendeurs : le Lead Meta navigateur est envoyé par GTM (avec eventID,
+    // dédupliqué avec le serveur Stape). Pas de fbq direct ici, sinon doublon.
+    if (flow !== "vente") fbq("track", metaEvent);
     if (typeof gtag === "function") {
       gtag("event", gaEvent, {
         event_category: flow === "vente" ? "landing_vente" : "landing_achat"
