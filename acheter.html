@@ -455,7 +455,18 @@
     const champs = ["nom","tel","courriel"].map(id=>document.getElementById(id));
     if (!valider(champs)) { montrerErreur("Remplissez votre nom, votre téléphone et un courriel valide."); return; }
 
-    const data = Object.fromEntries(new FormData(form).entries());
+    // Make route vers ACHETEUR seulement avec les memes champs que index.html :
+    // delai, preapprobation et type sont regroupes dans "budget" (champ deja transmis a FUB).
+    const brut = Object.fromEntries(new FormData(form).entries());
+    const extras = [
+      brut.type_propriete ? "type: " + brut.type_propriete : "",
+      brut.preapprobation ? "preapprobation: " + brut.preapprobation : "",
+      brut.delai ? "delai: " + brut.delai : ""
+    ].filter(Boolean);
+    const data = {};
+    ["nom","courriel","tel","secteur","source","lang","utm_source","utm_medium","utm_campaign","utm_content","utm_term","gclid","fbclid"]
+      .forEach(k => { data[k] = brut[k] || ""; });
+    data.budget = [brut.budget || ""].concat(extras).join(" | ");
     data.submitted_at = new Date().toISOString();
     data.page_url = location.href;
     data.intent = "buy";
