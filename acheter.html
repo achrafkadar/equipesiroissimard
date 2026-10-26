@@ -468,7 +468,10 @@
       .forEach(k => { data[k] = brut[k] || ""; });
     data.budget = [brut.budget || ""].concat(extras).join(" | ");
     data.submitted_at = new Date().toISOString();
-    data.page_url = location.href;
+    // Make classe ACHETEUR les leads dont l'adresse est la racine du site (comme index.html).
+    // On garde les UTM et on marque la page d'origine dans l'ancre.
+    data.page_url = location.origin + "/" + location.search + "#acheter";
+    data.page_source = location.pathname;
     data.intent = "buy";
 
     envoyer.disabled = true; envoyer.textContent = "Envoi en cours";
