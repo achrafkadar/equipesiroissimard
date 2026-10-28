@@ -411,7 +411,7 @@
 
 <script>
 (function(){
-  const WEBHOOK_URL = "https://hook.us2.make.com/12d7tomcqjtyhtvskgq7metkddlxu6kl";
+  const WEBHOOK_URL = "https://hook.us2.make.com/i3w672vf6n7dpu9gu0aatq7oriobdh7k";
 
   const form = document.getElementById("lead-form-buyer");
   const e1 = document.getElementById("etape1"), e2 = document.getElementById("etape2");
@@ -455,7 +455,7 @@
     const champs = ["nom","tel","courriel"].map(id=>document.getElementById(id));
     if (!valider(champs)) { montrerErreur("Remplissez votre nom, votre téléphone et un courriel valide."); return; }
 
-    // Make route vers ACHETEUR seulement avec les memes champs que index.html :
+    // Scenario Make "LP Acheteur" : memes champs que index.html.
     // delai, preapprobation et type sont regroupes dans "budget" (champ deja transmis a FUB).
     const brut = Object.fromEntries(new FormData(form).entries());
     const extras = [
@@ -468,10 +468,7 @@
       .forEach(k => { data[k] = brut[k] || ""; });
     data.budget = [brut.budget || ""].concat(extras).join(" | ");
     data.submitted_at = new Date().toISOString();
-    // Make classe ACHETEUR les leads dont l'adresse est la racine du site (comme index.html).
-    // On garde les UTM et on marque la page d'origine dans l'ancre.
-    data.page_url = location.origin + "/" + location.search + "#acheter";
-    data.page_source = location.pathname;
+    data.page_url = location.href;
     data.intent = "buy";
 
     envoyer.disabled = true; envoyer.textContent = "Envoi en cours";
